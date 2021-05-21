@@ -10,8 +10,8 @@
 ・Swift
 
 ### ライブラリ
-・Alamofire
-・SwiftyJSON
-・VerticalCardSwiper
-・SDWebImage
-・PKHUD
+##### ・Alamofire
+##### ・SwiftyJSON
+##### ・VerticalCardSwiper
+##### ・SDWebImage
+##### ・PKHUD
