@@ -12,7 +12,7 @@
         <!--本を探す-->
         <scene sceneID="gKp-F2-DO1">
             <objects>
-                <viewController id="VBm-EL-PjJ" sceneMemberID="viewController">
+                <viewController id="VBm-EL-PjJ" customClass="SearchViewController" customModule="BookResearchApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vP1-OY-zyM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,7 +37,7 @@
                                 <rect key="frame" x="20" y="80" width="374" height="237"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bdn-P8-7GN">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bdn-P8-7GN">
                                         <rect key="frame" x="16" y="19" width="32" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,7 +46,7 @@
                                             <outletCollection property="gestureRecognizers" destination="cwy-1N-6BO" appends="YES" id="QQ2-jz-Kd9"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qNe-y0-In8">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qNe-y0-In8">
                                         <rect key="frame" x="16" y="67.666666666666629" width="32" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -55,7 +55,7 @@
                                             <outletCollection property="gestureRecognizers" destination="FT7-s4-HgR" appends="YES" id="O2f-lM-96E"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="y8f-S1-wja">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="y8f-S1-wja">
                                         <rect key="frame" x="16" y="118.66666666666663" width="32" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -78,7 +78,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="出版日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KJ-9y-I1b">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="出版社" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KJ-9y-I1b">
                                         <rect key="frame" x="56" y="123" width="68" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
@@ -122,11 +122,18 @@
                     <tabBarItem key="tabBarItem" title="本を探す" image="magnifyingglass" catalog="system" id="j3C-S7-5kP"/>
                     <navigationItem key="navigationItem" id="hi3-as-9RU"/>
                     <connections>
+                        <outlet property="authorImageView" destination="qNe-y0-In8" id="tq2-An-8rc"/>
+                        <outlet property="publisherImageView" destination="y8f-S1-wja" id="0x1-0C-Un4"/>
+                        <outlet property="titleImageView" destination="bdn-P8-7GN" id="uEb-dY-vcF"/>
                         <segue destination="yNd-bW-jkZ" kind="presentation" modalPresentationStyle="fullScreen" id="7hJ-Px-sXl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgl-Ld-Nlh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="cwy-1N-6BO"/>
+                <tapGestureRecognizer id="cwy-1N-6BO">
+                    <connections>
+                        <action selector="titleTap:" destination="VBm-EL-PjJ" id="OOX-kG-brI"/>
+                    </connections>
+                </tapGestureRecognizer>
                 <tapGestureRecognizer id="FT7-s4-HgR"/>
                 <tapGestureRecognizer id="e8f-5r-PDt"/>
             </objects>

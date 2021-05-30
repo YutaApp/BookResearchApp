@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D628A3CD26630C20005D20FB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D628A3CC26630C20005D20FB /* SearchViewController.swift */; };
 		D69067492658795E00716728 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69067482658795E00716728 /* AppDelegate.swift */; };
 		D690674B2658795E00716728 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690674A2658795E00716728 /* SceneDelegate.swift */; };
 		D69067502658795E00716728 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D690674E2658795E00716728 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		10F8E80EB6BDF1BF3963DCC9 /* Pods-BookResearchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookResearchApp.debug.xcconfig"; path = "Target Support Files/Pods-BookResearchApp/Pods-BookResearchApp.debug.xcconfig"; sourceTree = "<group>"; };
 		987FDE65DC7D3ECC465D64C2 /* Pods_BookResearchApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookResearchApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78B42C71F1E9D9B287A3A11 /* Pods-BookResearchApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookResearchApp.release.xcconfig"; path = "Target Support Files/Pods-BookResearchApp/Pods-BookResearchApp.release.xcconfig"; sourceTree = "<group>"; };
+		D628A3CC26630C20005D20FB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D69067452658795E00716728 /* BookResearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookResearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69067482658795E00716728 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D690674A2658795E00716728 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +52,6 @@
 				10F8E80EB6BDF1BF3963DCC9 /* Pods-BookResearchApp.debug.xcconfig */,
 				C78B42C71F1E9D9B287A3A11 /* Pods-BookResearchApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -60,6 +61,31 @@
 				987FDE65DC7D3ECC465D64C2 /* Pods_BookResearchApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D628A3C926630AC0005D20FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D628A3CA26630ACD005D20FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D690674E2658795E00716728 /* Main.storyboard */,
+				D690675C2658958B00716728 /* SearchBookCardCell.swift */,
+				D690675D2658958B00716728 /* SearchBookCardCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D628A3CB26630ADD005D20FB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D628A3CC26630C20005D20FB /* SearchViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		D690673C2658795E00716728 = {
@@ -85,9 +111,9 @@
 			children = (
 				D69067482658795E00716728 /* AppDelegate.swift */,
 				D690674A2658795E00716728 /* SceneDelegate.swift */,
-				D690674E2658795E00716728 /* Main.storyboard */,
-				D690675C2658958B00716728 /* SearchBookCardCell.swift */,
-				D690675D2658958B00716728 /* SearchBookCardCell.xib */,
+				D628A3C926630AC0005D20FB /* Model */,
+				D628A3CA26630ACD005D20FB /* View */,
+				D628A3CB26630ADD005D20FB /* Controller */,
 				D69067512658795E00716728 /* Assets.xcassets */,
 				D69067532658795E00716728 /* LaunchScreen.storyboard */,
 				D69067562658795E00716728 /* Info.plist */,
@@ -212,6 +238,7 @@
 			files = (
 				D690675E2658958B00716728 /* SearchBookCardCell.swift in Sources */,
 				D69067492658795E00716728 /* AppDelegate.swift in Sources */,
+				D628A3CD26630C20005D20FB /* SearchViewController.swift in Sources */,
 				D690674B2658795E00716728 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

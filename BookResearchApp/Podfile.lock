@@ -1,7 +1,7 @@
 PODS:
   - Alamofire (5.4.1)
   - DropDown (2.3.13)
-  - PKHUD (3.2.1)
+  - PKHUD (5.3.0)
   - SDWebImage (5.10.2):
     - SDWebImage/Core (= 5.10.2)
   - SDWebImage/Core (5.10.2)
@@ -11,7 +11,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - DropDown
-  - PKHUD (~> 3.0)
+  - PKHUD (~> 5.0)
   - SDWebImage (~> 5.0)
   - SwiftyJSON (~> 4.0)
   - VerticalCardSwiper
@@ -28,11 +28,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
-  PKHUD: 001c11518f125a273ddf026bcc64918423744ea2
+  PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   VerticalCardSwiper: 68df635b354500f86934ea044ade37a264c044c6
 
-PODFILE CHECKSUM: 0ca652e43b157a849c23a07ead6bd991f8ab4ec3
+PODFILE CHECKSUM: 46f80c7d8316c6349a68b1cb4e4b7979371bef80
 
 COCOAPODS: 1.10.0
