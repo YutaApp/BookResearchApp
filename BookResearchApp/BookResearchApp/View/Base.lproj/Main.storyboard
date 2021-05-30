@@ -34,20 +34,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JEL-go-DrD">
-                                <rect key="frame" x="20" y="80" width="374" height="237"/>
+                                <rect key="frame" x="20" y="90" width="374" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bdn-P8-7GN">
-                                        <rect key="frame" x="16" y="19" width="32" height="29"/>
+                                    <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bdn-P8-7GN">
+                                        <rect key="frame" x="16" y="100" width="32" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <gestureRecognizers/>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="cwy-1N-6BO" appends="YES" id="QQ2-jz-Kd9"/>
+                                            <outletCollection property="gestureRecognizers" destination="C95-UM-2I1" appends="YES" id="h62-qA-cnP"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qNe-y0-In8">
-                                        <rect key="frame" x="16" y="67.666666666666629" width="32" height="29"/>
+                                    <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qNe-y0-In8">
+                                        <rect key="frame" x="16" y="150" width="32" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <gestureRecognizers/>
@@ -55,8 +55,8 @@
                                             <outletCollection property="gestureRecognizers" destination="FT7-s4-HgR" appends="YES" id="O2f-lM-96E"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="y8f-S1-wja">
-                                        <rect key="frame" x="16" y="118.66666666666663" width="32" height="29"/>
+                                    <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="y8f-S1-wja">
+                                        <rect key="frame" x="16" y="200" width="32" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <gestureRecognizers/>
@@ -65,53 +65,76 @@
                                         </connections>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bO4-MM-eTv">
-                                        <rect key="frame" x="56" y="23" width="73" height="21"/>
+                                        <rect key="frame" x="56" y="103" width="73" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="著者" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alj-IC-7Hz">
-                                        <rect key="frame" x="56" y="72" width="44" height="21"/>
+                                        <rect key="frame" x="56" y="153" width="44" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="出版社" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KJ-9y-I1b">
-                                        <rect key="frame" x="56" y="123" width="68" height="21"/>
+                                        <rect key="frame" x="56" y="203" width="68" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Itm-W3-IGB">
-                                        <rect key="frame" x="137" y="15" width="229" height="34"/>
+                                        <rect key="frame" x="137" y="95" width="229" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oTR-IG-mHw">
-                                        <rect key="frame" x="137" y="64" width="229" height="34"/>
+                                        <rect key="frame" x="137" y="145" width="229" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XCV-0k-dau">
-                                        <rect key="frame" x="137" y="115" width="229" height="34"/>
+                                        <rect key="frame" x="137" y="195" width="229" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0s-VO-slL">
-                                        <rect key="frame" x="87" y="184" width="201" height="30"/>
+                                        <rect key="frame" x="87" y="264" width="201" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.32763856523600821" blue="0.12033903336574259" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
                                         <state key="normal" title="上記の条件で探す">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="searchAction:" destination="VBm-EL-PjJ" eventType="touchUpInside" id="QmA-hk-8nW"/>
+                                        </connections>
                                     </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BEd-vC-0nR">
+                                        <rect key="frame" x="137" y="25" width="229" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="赤枠は必須項目です" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zw9-AT-aaj">
+                                        <rect key="frame" x="267" y="61" width="97" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="10"/>
+                                        <color key="textColor" red="1" green="0.12569866239999999" blue="0.047902245449999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="検索キーワード" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Svo-7n-Hf7">
+                                        <rect key="frame" x="11" y="31" width="119" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -122,20 +145,33 @@
                     <tabBarItem key="tabBarItem" title="本を探す" image="magnifyingglass" catalog="system" id="j3C-S7-5kP"/>
                     <navigationItem key="navigationItem" id="hi3-as-9RU"/>
                     <connections>
+                        <outlet property="alertLabel" destination="zw9-AT-aaj" id="wJz-gb-DL9"/>
                         <outlet property="authorImageView" destination="qNe-y0-In8" id="tq2-An-8rc"/>
+                        <outlet property="authorTextField" destination="oTR-IG-mHw" id="H2m-X4-uc3"/>
                         <outlet property="publisherImageView" destination="y8f-S1-wja" id="0x1-0C-Un4"/>
-                        <outlet property="titleImageView" destination="bdn-P8-7GN" id="uEb-dY-vcF"/>
+                        <outlet property="publisherTextField" destination="XCV-0k-dau" id="HyA-tO-Zxj"/>
+                        <outlet property="searchKeywordTextField" destination="BEd-vC-0nR" id="yw7-7y-qPc"/>
+                        <outlet property="titleImageView" destination="bdn-P8-7GN" id="fgs-ez-QMn"/>
+                        <outlet property="titleTextField" destination="Itm-W3-IGB" id="M2p-Ss-B73"/>
                         <segue destination="yNd-bW-jkZ" kind="presentation" modalPresentationStyle="fullScreen" id="7hJ-Px-sXl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgl-Ld-Nlh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="cwy-1N-6BO">
+                <tapGestureRecognizer id="FT7-s4-HgR">
                     <connections>
-                        <action selector="titleTap:" destination="VBm-EL-PjJ" id="OOX-kG-brI"/>
+                        <action selector="authorTap:" destination="VBm-EL-PjJ" id="in3-Wa-dTf"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="FT7-s4-HgR"/>
-                <tapGestureRecognizer id="e8f-5r-PDt"/>
+                <tapGestureRecognizer id="e8f-5r-PDt">
+                    <connections>
+                        <action selector="publisherTap:" destination="VBm-EL-PjJ" id="1gR-1e-IpL"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="C95-UM-2I1">
+                    <connections>
+                        <action selector="titleTap:" destination="VBm-EL-PjJ" id="h5J-IU-p4m"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1246.376811594203" y="15.489130434782609"/>
         </scene>
