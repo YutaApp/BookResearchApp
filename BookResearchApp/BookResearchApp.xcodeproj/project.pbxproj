@@ -15,6 +15,8 @@
 		D69067552658795E00716728 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69067532658795E00716728 /* LaunchScreen.storyboard */; };
 		D690675E2658958B00716728 /* SearchBookCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690675C2658958B00716728 /* SearchBookCardCell.swift */; };
 		D690675F2658958B00716728 /* SearchBookCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D690675D2658958B00716728 /* SearchBookCardCell.xib */; };
+		D6A9087D2666F36D00670EDC /* GoogleBooksAPIParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A9087C2666F36D00670EDC /* GoogleBooksAPIParams.swift */; };
+		D6A9087F2666FA9800670EDC /* GoogleBooksAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A9087E2666FA9800670EDC /* GoogleBooksAPIModel.swift */; };
 		EF8A5376EB79C78B085BF1AC /* Pods_BookResearchApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 987FDE65DC7D3ECC465D64C2 /* Pods_BookResearchApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		D69067562658795E00716728 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D690675C2658958B00716728 /* SearchBookCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookCardCell.swift; sourceTree = "<group>"; };
 		D690675D2658958B00716728 /* SearchBookCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBookCardCell.xib; sourceTree = "<group>"; };
+		D6A9087C2666F36D00670EDC /* GoogleBooksAPIParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksAPIParams.swift; sourceTree = "<group>"; };
+		D6A9087E2666FA9800670EDC /* GoogleBooksAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksAPIModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 		D628A3C926630AC0005D20FB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D6A9087C2666F36D00670EDC /* GoogleBooksAPIParams.swift */,
+				D6A9087E2666FA9800670EDC /* GoogleBooksAPIModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -238,7 +244,9 @@
 			files = (
 				D690675E2658958B00716728 /* SearchBookCardCell.swift in Sources */,
 				D69067492658795E00716728 /* AppDelegate.swift in Sources */,
+				D6A9087F2666FA9800670EDC /* GoogleBooksAPIModel.swift in Sources */,
 				D628A3CD26630C20005D20FB /* SearchViewController.swift in Sources */,
+				D6A9087D2666F36D00670EDC /* GoogleBooksAPIParams.swift in Sources */,
 				D690674B2658795E00716728 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
