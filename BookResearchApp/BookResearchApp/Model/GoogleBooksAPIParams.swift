@@ -12,7 +12,7 @@ struct GoogleBooksAPIParams
     let strTitle:String?
     let strAuthor:String?
     let strPublishedDate:String?
-    let strPageCount:String?
+    let iPageCount:Int?
     let strISBN10:String?
     let strISBN13:String?
     let strDescription:String?

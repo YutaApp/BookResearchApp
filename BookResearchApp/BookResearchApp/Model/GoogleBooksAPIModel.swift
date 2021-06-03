@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class GoogleBooksAPIModel
 {
-    let params = [GoogleBooksAPIParams]()
+    var params = [GoogleBooksAPIParams]()
     
     func getData(url:URL)
     {
@@ -31,8 +31,28 @@ class GoogleBooksAPIModel
                 
                 for i in 0 ..< itemCount
                 {
-                    let title = json["items"][i]["volumeInfo"]["title"]
+                    let title = json["items"][i]["volumeInfo"]["title"].string!
+                    let author = json["items"][i]["volumeInfo"]["authors"][0].string!
+                    let publishedDate = json["items"][i]["volumeInfo"]["publishedDate"].string!
+                    let pageCount = json["items"][i]["volumeInfo"]["pageCount"].int!
+                    let isbn10 = json["items"][i]["volumeInfo"]["industryIdentifiers"][0]["identifier"].string!
+                    let isbn13 = json["items"][i]["volumeInfo"]["industryIdentifiers"][1]["identifier"].string!
+                    let description = json["items"][i]["volumeInfo"]["description"].string!
+    
+                    print("--------------------\(i)番目のデータ--------------------")
                     print(title)
+                    print(author)
+                    print(publishedDate)
+                    print(pageCount)
+                    print(isbn10)
+                    print(isbn13)
+                    print(description)
+                    
+                    print("------------------------------------------------------")
+                    
+                    let getGoogleBooksAPIData = GoogleBooksAPIParams(strTitle: title, strAuthor: author, strPublishedDate: publishedDate, iPageCount: pageCount, strISBN10: isbn10, strISBN13: isbn13, strDescription: description)
+                        
+                        self.params.append(getGoogleBooksAPIData)
                 }
                 
                 

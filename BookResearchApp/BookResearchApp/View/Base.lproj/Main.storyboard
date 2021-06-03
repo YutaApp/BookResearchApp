@@ -207,7 +207,7 @@
                         <outlet property="searchKeywordTextField" destination="BEd-vC-0nR" id="yw7-7y-qPc"/>
                         <outlet property="titleImageView" destination="bdn-P8-7GN" id="fgs-ez-QMn"/>
                         <outlet property="titleTextField" destination="Itm-W3-IGB" id="M2p-Ss-B73"/>
-                        <segue destination="yNd-bW-jkZ" kind="presentation" modalPresentationStyle="fullScreen" id="7hJ-Px-sXl"/>
+                        <segue destination="LT1-Hz-xdn" kind="presentation" modalPresentationStyle="fullScreen" id="CP7-tE-EDs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgl-Ld-Nlh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -244,34 +244,27 @@
             </objects>
             <point key="canvasLocation" x="1246.376811594203" y="15.489130434782609"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="mJr-6W-l8b">
+        <!--Book Search Data View Controller-->
+        <scene sceneID="4Lp-wk-RhN">
             <objects>
-                <tableViewController id="yNd-bW-jkZ" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hAF-Ed-n0N">
+                <viewController id="LT1-Hz-xdn" customClass="BookSearchDataViewController" customModule="BookResearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3nJ-7J-1Pw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pkO-dy-8wo" customClass="VerticalCardSwiper" customModule="VerticalCardSwiper">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DQx-t6-wml"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="530" id="neF-ps-K2J">
-                                <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="530"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="neF-ps-K2J" id="qAE-fn-ABe">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="530"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="yNd-bW-jkZ" id="aX8-uh-CfC"/>
-                            <outlet property="delegate" destination="yNd-bW-jkZ" id="IgJ-lJ-dFf"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="oqa-p0-g8L"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wQb-h3-tep" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JuH-1v-enM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2012" y="15"/>
+            <point key="canvasLocation" x="2160.8695652173915" y="8.9673913043478262"/>
         </scene>
         <!--図書館で探す-->
         <scene sceneID="W3S-Sq-l48">
