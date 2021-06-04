@@ -6,18 +6,35 @@
 //
 
 import UIKit
+import VerticalCardSwiper
 
-class SearchBookCardCell: UITableViewCell {
+class SearchBookCardCell: CardCell {
 
+    @IBOutlet weak var bookImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var publishedDateLabel: UILabel!
+    @IBOutlet weak var pageCountLabel: UILabel!
+    @IBOutlet weak var isbn10Label: UILabel!
+    @IBOutlet weak var isbn13Label: UILabel!
+    @IBOutlet weak var textView: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    override func prepareForReuse() {
+        super.prepareForReuse()
     }
+    
+    public func setRandomBackgroundColor() {
+        
+        let randomRed: CGFloat = CGFloat.random(in: 0...255) / 255
+        let randomGreen: CGFloat = CGFloat.random(in: 0...255) / 255
+        let randomBlue: CGFloat = CGFloat.random(in: 0...255) / 255
+        self.backgroundColor = UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
+    }
+    
     
 }
