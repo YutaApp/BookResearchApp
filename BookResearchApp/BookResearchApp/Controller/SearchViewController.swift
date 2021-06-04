@@ -7,8 +7,8 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
-    
+class SearchViewController: UIViewController, GetDataCompleteDelegate {
+   
     @IBOutlet weak var bubunLabel: UILabel!
     @IBOutlet weak var kanzenLabel: UILabel!
     @IBOutlet weak var newOrderLabel: UILabel!
@@ -199,10 +199,8 @@ class SearchViewController: UIViewController {
         label.textColor = color
     }
     
-    func MakeGoogleBooksAPIRequestURL() -> URL?
+    func MakeGoogleBooksAPIRequestURL() -> String?
     {
-        var requestURL:URL?
-        
         searchURL = "https://www.googleapis.com/books/v1/volumes?q=\(searchKeywordTextField.text!)"
         
         if(kanzenTapFlg)
@@ -232,13 +230,11 @@ class SearchViewController: UIViewController {
         
         searchURL += "&langRestrict=ja&maxResults=40"
         
-        let encodingSearchURL = searchURL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let encodingSearchURL = searchURL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         
-        requestURL = URL(string:encodingSearchURL!)!
-        
-        print(requestURL as Any)
+        print(encodingSearchURL)
 
-        return requestURL
+        return encodingSearchURL
         
     }
     
@@ -258,5 +254,21 @@ class SearchViewController: UIViewController {
             //作成した検索URLを元にAFでGoogle Books APIを叩く
             googleBooksAPIModel.getData(url:MakeGoogleBooksAPIRequestURL()!)
         }
+        googleBooksAPIModel.getDataCompleteDelegate = self
+    }
+    
+    func getDataOK(flag: Int)
+    {
+        if(flag == 1)
+        {
+            performSegue(withIdentifier: "bookCard", sender: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let bookSearchDataVC = segue.destination as! BookSearchDataViewController
+        
+        bookSearchDataVC.googleBooksDataArray = googleBooksAPIModel.params
     }
 }
