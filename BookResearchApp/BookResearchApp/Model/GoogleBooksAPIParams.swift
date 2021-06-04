@@ -9,11 +9,12 @@ import Foundation
 
 struct GoogleBooksAPIParams
 {
-    let strTitle:String?
-    let strAuthor:String?
-    let strPublishedDate:String?
-    let iPageCount:Int?
-    let strISBN10:String?
-    let strISBN13:String?
-    let strDescription:String?
+    let strTitle:String
+    let strAuthor:String
+    let strBookImageString:String
+    let strPublishedDate:String
+    let iPageCount:Int
+    let strISBN10:String
+    let strISBN13:String
+    let strDescription:String
 }
