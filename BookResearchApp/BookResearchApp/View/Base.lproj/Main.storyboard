@@ -207,7 +207,7 @@
                         <outlet property="searchKeywordTextField" destination="BEd-vC-0nR" id="yw7-7y-qPc"/>
                         <outlet property="titleImageView" destination="bdn-P8-7GN" id="fgs-ez-QMn"/>
                         <outlet property="titleTextField" destination="Itm-W3-IGB" id="M2p-Ss-B73"/>
-                        <segue destination="LT1-Hz-xdn" kind="presentation" modalPresentationStyle="fullScreen" id="CP7-tE-EDs"/>
+                        <segue destination="LT1-Hz-xdn" kind="presentation" identifier="bookCard" modalPresentationStyle="fullScreen" id="CP7-tE-EDs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgl-Ld-Nlh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -247,7 +247,7 @@
         <!--Book Search Data View Controller-->
         <scene sceneID="4Lp-wk-RhN">
             <objects>
-                <viewController id="LT1-Hz-xdn" customClass="BookSearchDataViewController" customModule="BookResearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="LT1-Hz-xdn" customClass="BookSearchDataViewController" customModule="BookResearchApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3nJ-7J-1Pw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -261,6 +261,9 @@
                         <viewLayoutGuide key="safeArea" id="DQx-t6-wml"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="cardSwiper" destination="pkO-dy-8wo" id="ckN-7P-MPy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JuH-1v-enM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
