@@ -17,6 +17,7 @@
 		D690675F2658958B00716728 /* SearchBookCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D690675D2658958B00716728 /* SearchBookCardCell.xib */; };
 		D6A9087D2666F36D00670EDC /* GoogleBooksAPIParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A9087C2666F36D00670EDC /* GoogleBooksAPIParams.swift */; };
 		D6A9087F2666FA9800670EDC /* GoogleBooksAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A9087E2666FA9800670EDC /* GoogleBooksAPIModel.swift */; };
+		D6AE74C926709EB900CDA6FA /* FavoriteBookCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AE74C826709EB900CDA6FA /* FavoriteBookCardViewController.swift */; };
 		D6E2DB022668E652004EB6D4 /* BookSearchDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E2DB012668E652004EB6D4 /* BookSearchDataViewController.swift */; };
 		EF8A5376EB79C78B085BF1AC /* Pods_BookResearchApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 987FDE65DC7D3ECC465D64C2 /* Pods_BookResearchApp.framework */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,7 @@
 		D690675D2658958B00716728 /* SearchBookCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBookCardCell.xib; sourceTree = "<group>"; };
 		D6A9087C2666F36D00670EDC /* GoogleBooksAPIParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksAPIParams.swift; sourceTree = "<group>"; };
 		D6A9087E2666FA9800670EDC /* GoogleBooksAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksAPIModel.swift; sourceTree = "<group>"; };
+		D6AE74C826709EB900CDA6FA /* FavoriteBookCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteBookCardViewController.swift; sourceTree = "<group>"; };
 		D6E2DB012668E652004EB6D4 /* BookSearchDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchDataViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 			children = (
 				D628A3CC26630C20005D20FB /* SearchViewController.swift */,
 				D6E2DB012668E652004EB6D4 /* BookSearchDataViewController.swift */,
+				D6AE74C826709EB900CDA6FA /* FavoriteBookCardViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				D690675E2658958B00716728 /* SearchBookCardCell.swift in Sources */,
 				D6E2DB022668E652004EB6D4 /* BookSearchDataViewController.swift in Sources */,
 				D69067492658795E00716728 /* AppDelegate.swift in Sources */,
+				D6AE74C926709EB900CDA6FA /* FavoriteBookCardViewController.swift in Sources */,
 				D6A9087F2666FA9800670EDC /* GoogleBooksAPIModel.swift in Sources */,
 				D628A3CD26630C20005D20FB /* SearchViewController.swift in Sources */,
 				D6A9087D2666F36D00670EDC /* GoogleBooksAPIParams.swift in Sources */,

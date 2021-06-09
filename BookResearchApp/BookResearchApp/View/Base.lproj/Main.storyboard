@@ -374,7 +374,7 @@
         <!--お気に入り-->
         <scene sceneID="mKZ-N9-oaA">
             <objects>
-                <viewController id="s7F-Es-gXB" sceneMemberID="viewController">
+                <viewController id="s7F-Es-gXB" customClass="FavoriteBookCardViewController" customModule="BookResearchApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VPV-Zt-aOn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
