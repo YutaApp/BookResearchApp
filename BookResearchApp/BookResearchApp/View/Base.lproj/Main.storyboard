@@ -401,9 +401,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" image="back"/>
-                                <connections>
-                                    <action selector="back:" destination="LT1-Hz-xdn" eventType="touchUpInside" id="iKk-LG-nPh"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nag-lp-ytQ"/>
