@@ -33,7 +33,7 @@ class SearchBookCardCell: CardCell {
         let randomRed: CGFloat = CGFloat.random(in: 0...255) / 255
         let randomGreen: CGFloat = CGFloat.random(in: 0...255) / 255
         let randomBlue: CGFloat = CGFloat.random(in: 0...255) / 255
-        self.backgroundColor = UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
+        self.backgroundColor = UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 0.8)
     }
     
     
