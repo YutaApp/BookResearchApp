@@ -44,22 +44,43 @@ class BookSearchDataViewController: UIViewController, VerticalCardSwiperDelegate
     {
         if let cardCell = verticalCardSwiperView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: index) as? SearchBookCardCell
         {
-            verticalCardSwiperView.backgroundColor = UIColor.orange
+            verticalCardSwiperView.backgroundColor = UIColor.clear
             view.backgroundColor = verticalCardSwiperView.backgroundColor
             cardCell.setRandomBackgroundColor()
             cardCell.titleLabel.text = googleBooksDataArray[index].strTitle
             cardCell.authorLabel.text = googleBooksDataArray[index].strAuthor
             cardCell.publishedDateLabel.text = googleBooksDataArray[index].strPublishedDate
-            cardCell.pageCountLabel.text = String(googleBooksDataArray[index].iPageCount)
-            cardCell.isbn10Label.text = googleBooksDataArray[index].strISBN10
-            cardCell.isbn13Label.text = googleBooksDataArray[index].strISBN13
+            
+            if googleBooksDataArray[index].iPageCount == 0
+            {
+                cardCell.pageCountLabel.text = "表記なし"
+            }
+            else
+            {
+                cardCell.pageCountLabel.text = String(googleBooksDataArray[index].iPageCount)
+            }
+           
+            cardCell.isbn10Label.text = "ISBN10: " + googleBooksDataArray[index].strISBN10
+            cardCell.isbn13Label.text = "ISBN13: " + googleBooksDataArray[index].strISBN13
             cardCell.textView.text = googleBooksDataArray[index].strDescription
-            cardCell.bookImageView.sd_setImage(with: URL(string:googleBooksDataArray[index].strBookImageString), completed: nil)
+            cardCell.bookImageView.sd_setImage(with: URL(string:googleBooksDataArray[index].strBookImageString), placeholderImage: UIImage(named:"noimage"), options: .continueInBackground, context: nil)
             
             return cardCell
         }
         return CardCell()
     }
     
-
+    func willSwipeCardAway(card: CardCell, index: Int, swipeDirection: SwipeDirection)
+    {
+        if swipeDirection == .Left
+        {
+            googleBooksDataArray.remove(at: index)
+        }
+    }
+    
+    @IBAction func back(_ sender: Any)
+    {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
