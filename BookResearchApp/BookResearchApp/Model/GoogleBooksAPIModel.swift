@@ -18,6 +18,18 @@ class GoogleBooksAPIModel
     var params = [GoogleBooksAPIParams]()
     var getDataCompleteDelegate:GetDataCompleteDelegate?
     var newBookImageString = String()
+    var strType1 = String()
+    var strType2 = String()
+    
+    var strTitle = String()
+    var strAuthor = String()
+    var strBookImage = String()
+    var strPublishedDate = String()
+    var iPageCount = Int()
+    var strISBN10 = String()
+    var strISBN13 = String()
+    var strDescription = String()
+    
     
     func getData(url:String)
     {
@@ -37,25 +49,99 @@ class GoogleBooksAPIModel
                 
                 for i in 0 ..< itemCount
                 {
-                    let title = json["items"][i]["volumeInfo"]["title"].string!
-                    let author = json["items"][i]["volumeInfo"]["authors"][0].string!
-                    var bookImage = json["items"][i]["volumeInfo"]["imageLinks"]["thumbnail"].string!
-                    let publishedDate = json["items"][i]["volumeInfo"]["publishedDate"].string!
-                    let pageCount = json["items"][i]["volumeInfo"]["pageCount"].int!
-                    let isbn10 = json["items"][i]["volumeInfo"]["industryIdentifiers"][0]["identifier"].string!
-                    let isbn13 = json["items"][i]["volumeInfo"]["industryIdentifiers"][1]["identifier"].string!
-                    let description = json["items"][i]["volumeInfo"]["description"].string!
+                    strType1 = ""
+                    strType2 = ""
                     
-                    let from = bookImage.index(bookImage.startIndex, offsetBy: 0)
-                    let to   = bookImage.index(bookImage.startIndex, offsetBy: 5)
-                    let compareString = String(bookImage[from..<to])
+                    strTitle = "不明"
+                    strAuthor = "不明"
+                    strBookImage = ""
+                    strPublishedDate = "不明"
+                    iPageCount = 0
+                    strISBN10 = "表記なし"
+                    strISBN13 = "表記なし"
+                    strDescription = "なし"
                     
-                    if(compareString != "https")
+                    if let title = json["items"][i]["volumeInfo"]["title"].string
                     {
-                        bookImage = bookImage.replacingOccurrences(of: "http", with: "https")
+                        strTitle = title
                     }
                     
-                    let getGoogleBooksAPIData = GoogleBooksAPIParams(strTitle: title, strAuthor: author, strBookImageString: bookImage, strPublishedDate: publishedDate, iPageCount: pageCount, strISBN10: isbn10, strISBN13: isbn13, strDescription: description)
+                    if let author = json["items"][i]["volumeInfo"]["authors"][0].string
+                    {
+                        strAuthor = author
+                    }
+                    
+                    if let bookImage = json["items"][i]["volumeInfo"]["imageLinks"]["thumbnail"].string
+                    {
+                        strBookImage = bookImage
+                        
+                        let from = strBookImage.index(strBookImage.startIndex, offsetBy: 0)
+                        let to   = strBookImage.index(strBookImage.startIndex, offsetBy: 5)
+                        let compareString = String(strBookImage[from..<to])
+                        
+                        if(compareString != "https")
+                        {
+                            strBookImage = strBookImage.replacingOccurrences(of: "http", with: "https")
+                        }
+                    }
+                    
+                    if let publishedDate = json["items"][i]["volumeInfo"]["publishedDate"].string
+                    {
+                        strPublishedDate = publishedDate
+                    }
+                    
+                    if let pageCount = json["items"][i]["volumeInfo"]["pageCount"].int
+                    {
+                        iPageCount = pageCount
+                    }
+                    
+                    if let type1 = json["items"][i]["volumeInfo"]["industryIdentifiers"][0]["type"].string
+                    {
+                        strType1 = type1
+                    }
+                    
+                    if let type2 = json["items"][i]["volumeInfo"]["industryIdentifiers"][1]["type"].string
+                    {
+                        strType2 = type2
+                    }
+                    
+                    if strType1 == "ISBN_10"
+                    {
+                        if let isbn10 = json["items"][i]["volumeInfo"]["industryIdentifiers"][0]["identifier"].string
+                        {
+                            strISBN10 = isbn10
+                        }
+                    }
+                    else if strType1 == "ISBN_13"
+                    {
+                        if let isbn13 = json["items"][i]["volumeInfo"]["industryIdentifiers"][0]["identifier"].string
+                        {
+                            strISBN13 = isbn13
+                        }
+                    }
+                    
+                    if strType2 == "ISBN_10"
+                    {
+                        if let isbn10 = json["items"][i]["volumeInfo"]["industryIdentifiers"][1]["identifier"].string
+                        {
+                            strISBN10 = isbn10
+                        }
+                    }
+                    else if strType2 == "ISBN_13"
+                    {
+                        if let isbn13 = json["items"][i]["volumeInfo"]["industryIdentifiers"][1]["identifier"].string
+                        {
+                            strISBN13 = isbn13
+                        }
+                    }
+                   
+                    
+                    if let description = json["items"][i]["volumeInfo"]["description"].string
+                    {
+                        strDescription = description
+                    }
+                    
+                    let getGoogleBooksAPIData = GoogleBooksAPIParams(strTitle: strTitle, strAuthor: strAuthor, strBookImageString: strBookImage, strPublishedDate: strPublishedDate, iPageCount: iPageCount, strISBN10: strISBN10, strISBN13: strISBN13, strDescription: strDescription)
                         
                         self.params.append(getGoogleBooksAPIData)
                 }
