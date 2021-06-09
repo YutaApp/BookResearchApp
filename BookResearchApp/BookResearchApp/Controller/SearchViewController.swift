@@ -52,14 +52,14 @@ class SearchViewController: UIViewController, GetDataCompleteDelegate {
         if(!bubunTapFlg)
         {
             ChangeImageViewAndLabelLayer(imageView: kanzenSearchImageView, label: kanzenLabel, color: .gray, imageName: "square", useFlg: false)
-            ChangeImageViewAndLabelLayer(imageView: newOrderImageView, label: newOrderLabel, color: .black, imageName: "square", useFlg: true)
+            ChangeImageViewAndLabelLayer(imageView: newOrderImageView, label: newOrderLabel, color: .white, imageName: "square", useFlg: true)
             
             bubunSearchImageView.image = UIImage(systemName: "checkmark.square")
             bubunTapFlg = true
         }
         else if(bubunTapFlg)
         {
-            ChangeImageViewAndLabelLayer(imageView: kanzenSearchImageView, label: kanzenLabel, color: .black, imageName: "square", useFlg: true)
+            ChangeImageViewAndLabelLayer(imageView: kanzenSearchImageView, label: kanzenLabel, color: .white, imageName: "square", useFlg: true)
             
             bubunSearchImageView.image = UIImage(systemName: "square")
             bubunTapFlg = false
@@ -77,14 +77,14 @@ class SearchViewController: UIViewController, GetDataCompleteDelegate {
         if(!kanzenTapFlg)
         {
             ChangeImageViewAndLabelLayer(imageView: bubunSearchImageView, label: bubunLabel, color: .gray, imageName: "square", useFlg: false)
-            ChangeImageViewAndLabelLayer(imageView: newOrderImageView, label: newOrderLabel, color: .black, imageName: "square", useFlg: true)
+            ChangeImageViewAndLabelLayer(imageView: newOrderImageView, label: newOrderLabel, color: .white, imageName: "square", useFlg: true)
             
             kanzenSearchImageView.image = UIImage(systemName: "checkmark.square")
             kanzenTapFlg = true
         }
         else if(kanzenTapFlg)
         {
-            ChangeImageViewAndLabelLayer(imageView: bubunSearchImageView, label: bubunLabel, color: .black, imageName: "square", useFlg: true)
+            ChangeImageViewAndLabelLayer(imageView: bubunSearchImageView, label: bubunLabel, color: .white, imageName: "square", useFlg: true)
             
             kanzenSearchImageView.image = UIImage(systemName: "square")
             kanzenTapFlg = false
@@ -180,7 +180,7 @@ class SearchViewController: UIViewController, GetDataCompleteDelegate {
         {
             textField.isEnabled = false
             textField.backgroundColor = UIColor.lightGray
-            textField.alpha = 0.5
+            textField.alpha = 1.0
             imageView.image = UIImage(systemName: "square")
         }
         else if(tapFlg)
@@ -271,4 +271,5 @@ class SearchViewController: UIViewController, GetDataCompleteDelegate {
         
         bookSearchDataVC.googleBooksDataArray = googleBooksAPIModel.params
     }
+    
 }
