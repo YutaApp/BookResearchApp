@@ -407,6 +407,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="お気に入り" image="star" catalog="system" id="mrQ-YN-Pj6"/>
+                    <connections>
+                        <outlet property="favoriteCardSwiper" destination="2aq-k2-PTP" id="Vtw-xd-aqq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cjb-45-GGV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
