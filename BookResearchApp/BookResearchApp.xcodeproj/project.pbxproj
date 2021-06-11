@@ -15,9 +15,13 @@
 		D69067552658795E00716728 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69067532658795E00716728 /* LaunchScreen.storyboard */; };
 		D690675E2658958B00716728 /* SearchBookCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690675C2658958B00716728 /* SearchBookCardCell.swift */; };
 		D690675F2658958B00716728 /* SearchBookCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D690675D2658958B00716728 /* SearchBookCardCell.xib */; };
+		D6954B7626719A7F005CC0AC /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6954B7526719A7F005CC0AC /* WebViewController.swift */; };
+		D6954B7826719A96005CC0AC /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6954B7726719A96005CC0AC /* WebKit.framework */; };
 		D6A9087D2666F36D00670EDC /* GoogleBooksAPIParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A9087C2666F36D00670EDC /* GoogleBooksAPIParams.swift */; };
 		D6A9087F2666FA9800670EDC /* GoogleBooksAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A9087E2666FA9800670EDC /* GoogleBooksAPIModel.swift */; };
 		D6AE74C926709EB900CDA6FA /* FavoriteBookCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AE74C826709EB900CDA6FA /* FavoriteBookCardViewController.swift */; };
+		D6AE74CB2670A20B00CDA6FA /* FavoriteBookDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AE74CA2670A20B00CDA6FA /* FavoriteBookDB.swift */; };
+		D6AE74CD2670A92D00CDA6FA /* FavoriteBookDBParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AE74CC2670A92D00CDA6FA /* FavoriteBookDBParams.swift */; };
 		D6E2DB022668E652004EB6D4 /* BookSearchDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E2DB012668E652004EB6D4 /* BookSearchDataViewController.swift */; };
 		EF8A5376EB79C78B085BF1AC /* Pods_BookResearchApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 987FDE65DC7D3ECC465D64C2 /* Pods_BookResearchApp.framework */; };
 /* End PBXBuildFile section */
@@ -36,9 +40,13 @@
 		D69067562658795E00716728 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D690675C2658958B00716728 /* SearchBookCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookCardCell.swift; sourceTree = "<group>"; };
 		D690675D2658958B00716728 /* SearchBookCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBookCardCell.xib; sourceTree = "<group>"; };
+		D6954B7526719A7F005CC0AC /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		D6954B7726719A96005CC0AC /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		D6A9087C2666F36D00670EDC /* GoogleBooksAPIParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksAPIParams.swift; sourceTree = "<group>"; };
 		D6A9087E2666FA9800670EDC /* GoogleBooksAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksAPIModel.swift; sourceTree = "<group>"; };
 		D6AE74C826709EB900CDA6FA /* FavoriteBookCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteBookCardViewController.swift; sourceTree = "<group>"; };
+		D6AE74CA2670A20B00CDA6FA /* FavoriteBookDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBookDB.swift; sourceTree = "<group>"; };
+		D6AE74CC2670A92D00CDA6FA /* FavoriteBookDBParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBookDBParams.swift; sourceTree = "<group>"; };
 		D6E2DB012668E652004EB6D4 /* BookSearchDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchDataViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6954B7826719A96005CC0AC /* WebKit.framework in Frameworks */,
 				EF8A5376EB79C78B085BF1AC /* Pods_BookResearchApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +75,7 @@
 		302752563EE6758CF72FE17E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D6954B7726719A96005CC0AC /* WebKit.framework */,
 				987FDE65DC7D3ECC465D64C2 /* Pods_BookResearchApp.framework */,
 			);
 			name = Frameworks;
@@ -76,6 +86,8 @@
 			children = (
 				D6A9087C2666F36D00670EDC /* GoogleBooksAPIParams.swift */,
 				D6A9087E2666FA9800670EDC /* GoogleBooksAPIModel.swift */,
+				D6AE74CA2670A20B00CDA6FA /* FavoriteBookDB.swift */,
+				D6AE74CC2670A92D00CDA6FA /* FavoriteBookDBParams.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -96,6 +108,7 @@
 				D628A3CC26630C20005D20FB /* SearchViewController.swift */,
 				D6E2DB012668E652004EB6D4 /* BookSearchDataViewController.swift */,
 				D6AE74C826709EB900CDA6FA /* FavoriteBookCardViewController.swift */,
+				D6954B7526719A7F005CC0AC /* WebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -249,6 +262,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D690675E2658958B00716728 /* SearchBookCardCell.swift in Sources */,
+				D6954B7626719A7F005CC0AC /* WebViewController.swift in Sources */,
+				D6AE74CB2670A20B00CDA6FA /* FavoriteBookDB.swift in Sources */,
+				D6AE74CD2670A92D00CDA6FA /* FavoriteBookDBParams.swift in Sources */,
 				D6E2DB022668E652004EB6D4 /* BookSearchDataViewController.swift in Sources */,
 				D69067492658795E00716728 /* AppDelegate.swift in Sources */,
 				D6AE74C926709EB900CDA6FA /* FavoriteBookCardViewController.swift in Sources */,

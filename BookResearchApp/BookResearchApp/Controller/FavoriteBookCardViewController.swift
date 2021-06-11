@@ -7,21 +7,29 @@
 
 import UIKit
 import VerticalCardSwiper
+import RealmSwift
 
 class FavoriteBookCardViewController: UIViewController,VerticalCardSwiperDelegate,VerticalCardSwiperDatasource {
    
-    var favoriteBookDataArray = [GoogleBooksAPIParams]()
+    var favoriteBookDataArray = [FavoriteBookDBParams]()
+    var deleteIndex = Int()
+    
+    //Amazon・楽天ブックスに飛ぶためのURL
+    var amazonURL = String()
+    var rakutenBooksURL = String()
     
     @IBOutlet weak var favoriteCardSwiper: VerticalCardSwiper!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
         
-        if UserDefaults.standard.object(forKey: "favoriteBookData") != nil
-        {
-            favoriteBookDataArray = UserDefaults.standard.object(forKey: "favoriteBookData") as! [GoogleBooksAPIParams]
-        }
+        bookDataGetFromRealm()
         
         favoriteCardSwiper.delegate = self
         favoriteCardSwiper.datasource = self
@@ -59,11 +67,82 @@ class FavoriteBookCardViewController: UIViewController,VerticalCardSwiperDelegat
             cardCell.textView.text = favoriteBookDataArray[index].strDescription
             cardCell.bookImageView.sd_setImage(with: URL(string:favoriteBookDataArray[index].strBookImageString), placeholderImage: UIImage(named:"noimage"), options: .continueInBackground, context: nil)
             
+            cardCell.amazonTap.addTarget(self, action: #selector(amazonToMove(_:)), for: .touchUpInside)
+            cardCell.amazonTap.tag = index
+            
+            cardCell.rakutenTap.addTarget(self, action: #selector(rakutenBooksToMove(_:)), for: .touchUpInside)
+            cardCell.rakutenTap.tag = index
+            
             return cardCell
         }
         return CardCell()
     }
     
-
+    @objc func rakutenBooksToMove(_ sender:UIButton)
+    {
+        rakutenBooksURL = "https://books.rakuten.co.jp/search?sitem=\(favoriteBookDataArray[sender.tag].strTitle)"
+        print(rakutenBooksURL)
+        
+        let webVC = storyboard?.instantiateViewController(identifier: "webView") as! WebViewController
+        
+        webVC.rakutenBooksURL = rakutenBooksURL
+        
+        self.present(webVC, animated: true, completion: nil)
+    }
+    
+    @objc func amazonToMove(_ sender:UIButton)
+    {
+        if(favoriteBookDataArray[sender.tag].strISBN10 == "表記なし")
+        {
+            amazonURL = "https://www.amazon.co.jp"
+        }
+        else
+        {
+            amazonURL = "https://www.amazon.co.jp/dp/\(favoriteBookDataArray[sender.tag].strISBN10)"
+        }
+        
+        let webVC = storyboard?.instantiateViewController(identifier: "webView") as! WebViewController
+        
+        webVC.amazonURL = amazonURL
+        
+        self.present(webVC, animated: true, completion: nil)
+    }
+    
+    func willSwipeCardAway(card: CardCell, index: Int, swipeDirection: SwipeDirection)
+    {
+        if swipeDirection == .Left
+        {
+            deleteIndex = index
+            bookDataDeleteFromRealm()
+            favoriteBookDataArray.remove(at: index)
+        }
+    }
+    
+    func bookDataGetFromRealm()
+    {
+        favoriteBookDataArray.removeAll()
+        
+        let favoriteBookDB = try! Realm()
+        let results = favoriteBookDB.objects(FavoriteBookDB.self)
+        
+        for index in 0..<results.count
+        {
+            let favoriteBookDBParams = FavoriteBookDBParams(strTitle: results[index].strTitle, strAuthor: results[index].strAuthor, strBookImageString: results[index].strBookImageString, strPublishedDate: results[index].strPublishedDate, iPageCount: results[index].iPageCount, strISBN10: results[index].strISBN10, strISBN13: results[index].strISBN13, strDescription: results[index].strDescription)
+            
+            favoriteBookDataArray.append(favoriteBookDBParams)
+        }
+    }
+    
+    func bookDataDeleteFromRealm()
+    {
+        let saveWriteToRealm = try! Realm()
+        let deleteData = saveWriteToRealm.objects(FavoriteBookDB.self).filter("strTitle == '\(favoriteBookDataArray[deleteIndex].strTitle)'")
+         
+         try! saveWriteToRealm.write
+         {
+            saveWriteToRealm.delete(deleteData)
+         }
+        
+    }
 
 }
