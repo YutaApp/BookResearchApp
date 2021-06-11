@@ -284,11 +284,50 @@
                     </view>
                     <connections>
                         <outlet property="cardSwiper" destination="pkO-dy-8wo" id="ckN-7P-MPy"/>
+                        <segue destination="5Fm-ko-Jq9" kind="presentation" id="28E-ES-IqH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JuH-1v-enM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2160.8695652173915" y="8.9673913043478262"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="5It-mR-40X">
+            <objects>
+                <viewController storyboardIdentifier="webView" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Fm-ko-Jq9" customClass="WebViewController" customModule="BookResearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QQA-Yr-Po2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKV-BB-QzL">
+                                <rect key="frame" x="10" y="10" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="back:" destination="5Fm-ko-Jq9" eventType="touchUpInside" id="BkB-dR-fb6"/>
+                                </connections>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4D9-m9-84L">
+                                <rect key="frame" x="0.0" y="63" width="414" height="673"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="I3m-V3-2BQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="4D9-m9-84L" id="oU3-zO-T0K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="npO-Wi-wrR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2981" y="15"/>
         </scene>
         <!--図書館で探す-->
         <scene sceneID="W3S-Sq-l48">
@@ -396,12 +435,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hda-Sr-0nv">
-                                <rect key="frame" x="10" y="10" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" image="back"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nag-lp-ytQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

@@ -18,6 +18,8 @@ class SearchBookCardCell: CardCell {
     @IBOutlet weak var isbn10Label: UILabel!
     @IBOutlet weak var isbn13Label: UILabel!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var amazonTap: UIButton!
+    @IBOutlet weak var rakutenTap: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
