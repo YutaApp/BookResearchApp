@@ -9,16 +9,24 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-protocol CityNameGetDataCompleteDelegate
+protocol CalilGetDataCompleteDelegate
 {
-    func cityNameAppendOK(flag:Int)
+    func calilGetDataAppendOK(flag:Int)
 }
 
 class LibraryInfoGetModel
 {
     var strCityName = String()
+    var strGeocode  = String()
+    var strSystemid = String()
+    var strAddress  = String()
+    var strTel = String()
+    var strLibkey = String()
+    var strFormal = String()
+    
+    var libraryInfoGetParamsArray = [LibraryInfoGetParams]()
     var strCityNameArray = [String]()
-    var cityNameGetDataComplete:CityNameGetDataCompleteDelegate?
+    var cityNameGetDataComplete:CalilGetDataCompleteDelegate?
     
     func getCityName(url:String)
     {
@@ -30,21 +38,32 @@ class LibraryInfoGetModel
             case .success:
                 let json = JSON(response.data as Any)
                 
+                libraryInfoGetParamsArray.removeAll()
                 strCityNameArray.removeAll()
                 
                 for i in 0..<json.count
                 {
-                    if let cityName = json[i]["city"].string
+                    if let cityName = json[i]["city"].string,let geocode = json[i]["geocode"].string,let systemid = json[i]["systemid"].string,let address = json[i]["address"].string,let tel = json[i]["tel"].string, let libkey = json[i]["libkey"].string,let formal = json[i]["formal"].string
                     {
                         strCityName = cityName
+                        strGeocode = geocode
+                        strSystemid = systemid
+                        strAddress = address
+                        strTel = tel
+                        strLibkey = libkey
+                        strFormal = formal
                         
-                        if !strCityNameArray.contains(strCityName)
+                        let libraryInfoGetParams = LibraryInfoGetParams(strCityName: strCityName, strGeocode: strGeocode, strSystemid: strSystemid, strAddress: strAddress, strTel: strTel, strLibkey: strLibkey,strFormal: strFormal)
+                        
+                        libraryInfoGetParamsArray.append(libraryInfoGetParams)
+                        
+                        if !strCityNameArray.contains(cityName)
                         {
-                            strCityNameArray.append(strCityName)
+                            strCityNameArray.append(cityName)
                         }
                     }
                 }
-                cityNameGetDataComplete?.cityNameAppendOK(flag: 1)
+                cityNameGetDataComplete?.calilGetDataAppendOK(flag: 1)
                 
                 
             case .failure(let error):
