@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="85" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="BookResearchApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="370" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="370" height="85"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="図書館の名前" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKl-Oz-sfl">
+                        <rect key="frame" x="8" y="11" width="230" height="63"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="230" id="BaW-gK-mJb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="貸出中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPR-jC-uCM">
+                        <rect key="frame" x="245" y="43" width="45" height="15"/>
+                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBI-Vf-gha">
+                        <rect key="frame" x="323" y="26.5" width="17" height="32.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="貸出状況" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLu-fJ-inM">
+                        <rect key="frame" x="246" y="25" width="40" height="10"/>
+                        <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="10"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yKl-Oz-sfl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="438-Cf-3JZ"/>
+                    <constraint firstItem="MPR-jC-uCM" firstAttribute="top" secondItem="gLu-fJ-inM" secondAttribute="bottom" constant="8" symbolic="YES" id="4eC-sX-WIk"/>
+                    <constraint firstItem="OBI-Vf-gha" firstAttribute="leading" secondItem="MPR-jC-uCM" secondAttribute="trailing" constant="33" id="H5d-Fe-hVX"/>
+                    <constraint firstItem="gLu-fJ-inM" firstAttribute="leading" secondItem="yKl-Oz-sfl" secondAttribute="trailing" constant="8" symbolic="YES" id="N0e-Xj-FJI"/>
+                    <constraint firstAttribute="trailing" secondItem="OBI-Vf-gha" secondAttribute="trailing" constant="30" id="N9N-so-99M"/>
+                    <constraint firstAttribute="bottom" secondItem="MPR-jC-uCM" secondAttribute="bottom" constant="27" id="OsC-Pw-0fE"/>
+                    <constraint firstAttribute="bottom" secondItem="yKl-Oz-sfl" secondAttribute="bottom" constant="11" id="R5u-5f-MFt"/>
+                    <constraint firstItem="MPR-jC-uCM" firstAttribute="top" secondItem="gLu-fJ-inM" secondAttribute="bottom" constant="8" symbolic="YES" id="Ywa-GV-Onu"/>
+                    <constraint firstItem="MPR-jC-uCM" firstAttribute="leading" secondItem="yKl-Oz-sfl" secondAttribute="trailing" constant="7" id="Zq3-QP-VO5"/>
+                    <constraint firstItem="OBI-Vf-gha" firstAttribute="leading" secondItem="MPR-jC-uCM" secondAttribute="trailing" constant="33" id="aOg-z5-ZHl"/>
+                    <constraint firstItem="MPR-jC-uCM" firstAttribute="leading" secondItem="yKl-Oz-sfl" secondAttribute="trailing" constant="7" id="fqE-wy-K3w"/>
+                    <constraint firstItem="gLu-fJ-inM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="hFj-t3-h82"/>
+                    <constraint firstItem="OBI-Vf-gha" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="26.5" id="lzd-A8-Ihz"/>
+                    <constraint firstItem="yKl-Oz-sfl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="rhF-jm-bJG"/>
+                    <constraint firstAttribute="bottom" secondItem="OBI-Vf-gha" secondAttribute="bottom" constant="26" id="sGD-o1-jUr"/>
+                    <constraint firstItem="OBI-Vf-gha" firstAttribute="leading" secondItem="gLu-fJ-inM" secondAttribute="trailing" constant="37" id="zfE-LG-KdT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="confirmLabel" destination="MPR-jC-uCM" id="I1T-yU-28s"/>
+                <outlet property="libNameLabel" destination="yKl-Oz-sfl" id="dC3-tT-XLw"/>
+            </connections>
+            <point key="canvasLocation" x="289.85507246376812" y="137.61160714285714"/>
+        </tableViewCell>
+    </objects>
+</document>

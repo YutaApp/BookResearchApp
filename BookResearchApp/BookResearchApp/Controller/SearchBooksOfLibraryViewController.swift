@@ -7,16 +7,22 @@
 
 import UIKit
 import DropDown
+import PKHUD
 
-class SearchBooksOfLibraryViewController: UIViewController,CityNameGetDataCompleteDelegate {
+class SearchBooksOfLibraryViewController: UIViewController,CalilGetDataCompleteDelegate,UITableViewDelegate,UITableViewDataSource,TableViewReloadOKDelegate{
    
     @IBOutlet weak var dropdownViewC: UIView!
     @IBOutlet weak var dropdownView: UIView!
     @IBOutlet weak var prefectureNameBtn: UIButton!
     @IBOutlet weak var cityNameBtn: UIButton!
+    @IBOutlet weak var isbnTextField: UITextField!
+    @IBOutlet weak var tableView: UITableView!
     
     let appKey:String = "0843cb9fb76b0d035ac60cc0cbf885d4"
     let libraryInfoGetModel = LibraryInfoGetModel()
+    let calilBookJyoutaiGetModel = CalilBookJyoutaiGetModel()
+    var searchIndex = Int()
+    var systemid:String = ""
     
     let dropDown = DropDown()
     let dropDownC = DropDown()
@@ -75,6 +81,10 @@ class SearchBooksOfLibraryViewController: UIViewController,CityNameGetDataComple
         super.viewDidLoad()
 
         initDropDown()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
     }
     
     func initDropDown()
@@ -97,10 +107,11 @@ class SearchBooksOfLibraryViewController: UIViewController,CityNameGetDataComple
         dropDownC.dataSource = libraryInfoGetModel.strCityNameArray
         dropDownC.selectionAction = {[unowned self](index:Int,item:String)in
             cityNameBtn.setTitle(libraryInfoGetModel.strCityNameArray[index], for: .normal)
+            searchIndex = index
         }
     }
     
-    func cityNameAppendOK(flag: Int)
+    func calilGetDataAppendOK(flag: Int)
     {
         if flag == 1
         {
@@ -120,5 +131,67 @@ class SearchBooksOfLibraryViewController: UIViewController,CityNameGetDataComple
         dropDownC.show()
     }
     
+    @IBAction func search(_ sender: Any)
+    {
+        HUD.show(.progress)
+        
+        for i in 0..<libraryInfoGetModel.libraryInfoGetParamsArray.count
+        {
+            if libraryInfoGetModel.libraryInfoGetParamsArray[i].strCityName == libraryInfoGetModel.strCityNameArray[searchIndex]
+            {
+                systemid = libraryInfoGetModel.libraryInfoGetParamsArray[i].strSystemid
+                break
+            }
+        }
+        
+        if isbnTextField.text?.isEmpty == false && systemid != ""
+        {
+            let url = "https://api.calil.jp/check?appkey=\(appKey)&isbn=\(isbnTextField.text!)&systemid=\(systemid)&callback=no"
+            
+            print(url)
+            
+            calilBookJyoutaiGetModel.kashidashiCheck(url: url, isbn: isbnTextField.text!, systemid: systemid)
+            calilBookJyoutaiGetModel.tableViewReloadOKDelegate = self
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return calilBookJyoutaiGetModel.libkeyKArray.count
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
+        cell.setRandomBackgroundColor()
+        
+        for i in 0..<libraryInfoGetModel.libraryInfoGetParamsArray.count
+        {
+            if calilBookJyoutaiGetModel.libkeyKArray[indexPath.row] == libraryInfoGetModel.libraryInfoGetParamsArray[i].strLibkey
+            {
+                cell.libNameLabel.text = libraryInfoGetModel.libraryInfoGetParamsArray[i].strFormal
+                print(cell.libNameLabel.text!)
+            }
+        }
+        cell.confirmLabel.text = calilBookJyoutaiGetModel.libkeyVArray[indexPath.row]
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return tableView.estimatedRowHeight
+    }
+    
+    func reloadOK(flg: Int)
+    {
+        if flg == 1
+        {
+            tableView.reloadData()
+            HUD.hide()
+        }
+    }
     
 }

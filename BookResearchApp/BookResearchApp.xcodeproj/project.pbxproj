@@ -25,6 +25,11 @@
 		D6AE74CB2670A20B00CDA6FA /* FavoriteBookDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AE74CA2670A20B00CDA6FA /* FavoriteBookDB.swift */; };
 		D6AE74CD2670A92D00CDA6FA /* FavoriteBookDBParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AE74CC2670A92D00CDA6FA /* FavoriteBookDBParams.swift */; };
 		D6E2DB022668E652004EB6D4 /* BookSearchDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E2DB012668E652004EB6D4 /* BookSearchDataViewController.swift */; };
+		D6F8953B267710B6005864BA /* LibraryInfoGetParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F8953A267710B6005864BA /* LibraryInfoGetParams.swift */; };
+		D6F8953E26773F8F005864BA /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F8953C26773F8F005864BA /* TableViewCell.swift */; };
+		D6F8953F26773F8F005864BA /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6F8953D26773F8F005864BA /* TableViewCell.xib */; };
+		D6F89541267747B7005864BA /* CalilBookJyoutaiGetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F89540267747B7005864BA /* CalilBookJyoutaiGetModel.swift */; };
+		D6F89543267747D7005864BA /* CalilBookJyoutaiGetParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F89542267747D7005864BA /* CalilBookJyoutaiGetParams.swift */; };
 		EF8A5376EB79C78B085BF1AC /* Pods_BookResearchApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 987FDE65DC7D3ECC465D64C2 /* Pods_BookResearchApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +57,11 @@
 		D6AE74CA2670A20B00CDA6FA /* FavoriteBookDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBookDB.swift; sourceTree = "<group>"; };
 		D6AE74CC2670A92D00CDA6FA /* FavoriteBookDBParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBookDBParams.swift; sourceTree = "<group>"; };
 		D6E2DB012668E652004EB6D4 /* BookSearchDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchDataViewController.swift; sourceTree = "<group>"; };
+		D6F8953A267710B6005864BA /* LibraryInfoGetParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryInfoGetParams.swift; sourceTree = "<group>"; };
+		D6F8953C26773F8F005864BA /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		D6F8953D26773F8F005864BA /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		D6F89540267747B7005864BA /* CalilBookJyoutaiGetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalilBookJyoutaiGetModel.swift; sourceTree = "<group>"; };
+		D6F89542267747D7005864BA /* CalilBookJyoutaiGetParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalilBookJyoutaiGetParams.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +103,9 @@
 				D6AE74CA2670A20B00CDA6FA /* FavoriteBookDB.swift */,
 				D6AE74CC2670A92D00CDA6FA /* FavoriteBookDBParams.swift */,
 				D68CA02C2674AD7F00D24FC5 /* LibraryInfoGetModel.swift */,
+				D6F8953A267710B6005864BA /* LibraryInfoGetParams.swift */,
+				D6F89540267747B7005864BA /* CalilBookJyoutaiGetModel.swift */,
+				D6F89542267747D7005864BA /* CalilBookJyoutaiGetParams.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,6 +116,8 @@
 				D690674E2658795E00716728 /* Main.storyboard */,
 				D690675C2658958B00716728 /* SearchBookCardCell.swift */,
 				D690675D2658958B00716728 /* SearchBookCardCell.xib */,
+				D6F8953C26773F8F005864BA /* TableViewCell.swift */,
+				D6F8953D26773F8F005864BA /* TableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D69067552658795E00716728 /* LaunchScreen.storyboard in Resources */,
+				D6F8953F26773F8F005864BA /* TableViewCell.xib in Resources */,
 				D69067522658795E00716728 /* Assets.xcassets in Resources */,
 				D690675F2658958B00716728 /* SearchBookCardCell.xib in Resources */,
 				D69067502658795E00716728 /* Main.storyboard in Resources */,
@@ -267,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6F8953E26773F8F005864BA /* TableViewCell.swift in Sources */,
 				D690675E2658958B00716728 /* SearchBookCardCell.swift in Sources */,
 				D68CA02D2674AD7F00D24FC5 /* LibraryInfoGetModel.swift in Sources */,
 				D6954B7626719A7F005CC0AC /* WebViewController.swift in Sources */,
@@ -275,11 +292,14 @@
 				D6E2DB022668E652004EB6D4 /* BookSearchDataViewController.swift in Sources */,
 				D69067492658795E00716728 /* AppDelegate.swift in Sources */,
 				D6AE74C926709EB900CDA6FA /* FavoriteBookCardViewController.swift in Sources */,
+				D6F8953B267710B6005864BA /* LibraryInfoGetParams.swift in Sources */,
 				D6A9087F2666FA9800670EDC /* GoogleBooksAPIModel.swift in Sources */,
 				D6A28E312673451D00CAEDB1 /* SearchBooksOfLibraryViewController.swift in Sources */,
 				D628A3CD26630C20005D20FB /* SearchViewController.swift in Sources */,
 				D6A9087D2666F36D00670EDC /* GoogleBooksAPIParams.swift in Sources */,
+				D6F89543267747D7005864BA /* CalilBookJyoutaiGetParams.swift in Sources */,
 				D690674B2658795E00716728 /* SceneDelegate.swift in Sources */,
+				D6F89541267747B7005864BA /* CalilBookJyoutaiGetModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
