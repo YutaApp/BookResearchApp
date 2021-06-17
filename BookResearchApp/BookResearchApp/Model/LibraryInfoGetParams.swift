@@ -16,4 +16,6 @@ struct LibraryInfoGetParams
     let strTel:String
     let strLibkey:String
     let strFormal:String
+    let strShort:String
+    let strCategory:String
 }

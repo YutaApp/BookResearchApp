@@ -255,6 +255,7 @@ class SearchViewController: UIViewController, GetDataCompleteDelegate {
             googleBooksAPIModel.getData(url:MakeGoogleBooksAPIRequestURL()!)
         }
         googleBooksAPIModel.getDataCompleteDelegate = self
+        
     }
     
     func getDataOK(flag: Int)

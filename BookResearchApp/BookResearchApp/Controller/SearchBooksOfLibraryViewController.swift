@@ -22,6 +22,7 @@ class SearchBooksOfLibraryViewController: UIViewController,CalilGetDataCompleteD
     let libraryInfoGetModel = LibraryInfoGetModel()
     let calilBookJyoutaiGetModel = CalilBookJyoutaiGetModel()
     var searchIndex = Int()
+    var didSelectIndex = Int()
     var systemid:String = ""
     
     let dropDown = DropDown()
@@ -172,12 +173,38 @@ class SearchBooksOfLibraryViewController: UIViewController,CalilGetDataCompleteD
             if calilBookJyoutaiGetModel.libkeyKArray[indexPath.row] == libraryInfoGetModel.libraryInfoGetParamsArray[i].strLibkey
             {
                 cell.libNameLabel.text = libraryInfoGetModel.libraryInfoGetParamsArray[i].strFormal
-                print(cell.libNameLabel.text!)
             }
         }
+        
         cell.confirmLabel.text = calilBookJyoutaiGetModel.libkeyVArray[indexPath.row]
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+
+        didSelectIndex = indexPath.row
+        
+        performSegue(withIdentifier: "libDetail", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let libraryDetailVC = segue.destination as! LibraryDetailViewController
+        
+        for i in 0..<libraryInfoGetModel.libraryInfoGetParamsArray.count
+        {
+            if calilBookJyoutaiGetModel.libkeyKArray[didSelectIndex] == libraryInfoGetModel.libraryInfoGetParamsArray[i].strLibkey
+            {
+                libraryDetailVC.strFormal = libraryInfoGetModel.libraryInfoGetParamsArray[i].strFormal
+                libraryDetailVC.strShort = libraryInfoGetModel.libraryInfoGetParamsArray[i].strShort
+                libraryDetailVC.strCategory = libraryInfoGetModel.libraryInfoGetParamsArray[i].strCategory
+                libraryDetailVC.strAddress = libraryInfoGetModel.libraryInfoGetParamsArray[i].strAddress
+                libraryDetailVC.strTel = libraryInfoGetModel.libraryInfoGetParamsArray[i].strTel
+                break
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat

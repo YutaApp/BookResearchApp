@@ -23,6 +23,8 @@ class LibraryInfoGetModel
     var strTel = String()
     var strLibkey = String()
     var strFormal = String()
+    var strShort = String()
+    var strCategory = String()
     
     var libraryInfoGetParamsArray = [LibraryInfoGetParams]()
     var strCityNameArray = [String]()
@@ -43,7 +45,7 @@ class LibraryInfoGetModel
                 
                 for i in 0..<json.count
                 {
-                    if let cityName = json[i]["city"].string,let geocode = json[i]["geocode"].string,let systemid = json[i]["systemid"].string,let address = json[i]["address"].string,let tel = json[i]["tel"].string, let libkey = json[i]["libkey"].string,let formal = json[i]["formal"].string
+                    if let cityName = json[i]["city"].string,let geocode = json[i]["geocode"].string,let systemid = json[i]["systemid"].string,let address = json[i]["address"].string,let tel = json[i]["tel"].string, let libkey = json[i]["libkey"].string,let formal = json[i]["formal"].string,let short = json[i]["short"].string,let category = json[i]["category"].string
                     {
                         strCityName = cityName
                         strGeocode = geocode
@@ -52,8 +54,10 @@ class LibraryInfoGetModel
                         strTel = tel
                         strLibkey = libkey
                         strFormal = formal
+                        strShort = short
+                        strCategory = category
                         
-                        let libraryInfoGetParams = LibraryInfoGetParams(strCityName: strCityName, strGeocode: strGeocode, strSystemid: strSystemid, strAddress: strAddress, strTel: strTel, strLibkey: strLibkey,strFormal: strFormal)
+                        let libraryInfoGetParams = LibraryInfoGetParams(strCityName: strCityName, strGeocode: strGeocode, strSystemid: strSystemid, strAddress: strAddress, strTel: strTel, strLibkey: strLibkey,strFormal: strFormal,strShort: short,strCategory: category)
                         
                         libraryInfoGetParamsArray.append(libraryInfoGetParams)
                         
