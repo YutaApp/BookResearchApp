@@ -28,6 +28,7 @@ class LibraryInfoGetModel
     
     var libraryInfoGetParamsArray = [LibraryInfoGetParams]()
     var strCityNameArray = [String]()
+    var strSystemidArray = [String]()
     var cityNameGetDataComplete:CalilGetDataCompleteDelegate?
     
     func getCityName(url:String)
@@ -64,6 +65,7 @@ class LibraryInfoGetModel
                         if !strCityNameArray.contains(cityName)
                         {
                             strCityNameArray.append(cityName)
+                            strSystemidArray.append(systemid)
                         }
                     }
                 }

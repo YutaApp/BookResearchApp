@@ -19,6 +19,7 @@
 		D690675F2658958B00716728 /* SearchBookCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D690675D2658958B00716728 /* SearchBookCardCell.xib */; };
 		D6954B7626719A7F005CC0AC /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6954B7526719A7F005CC0AC /* WebViewController.swift */; };
 		D6954B7826719A96005CC0AC /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6954B7726719A96005CC0AC /* WebKit.framework */; };
+		D69D49232680699600D2AA15 /* LibraryMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D49222680699600D2AA15 /* LibraryMapViewController.swift */; };
 		D6A28E312673451D00CAEDB1 /* SearchBooksOfLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A28E302673451D00CAEDB1 /* SearchBooksOfLibraryViewController.swift */; };
 		D6A9087D2666F36D00670EDC /* GoogleBooksAPIParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A9087C2666F36D00670EDC /* GoogleBooksAPIParams.swift */; };
 		D6A9087F2666FA9800670EDC /* GoogleBooksAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A9087E2666FA9800670EDC /* GoogleBooksAPIModel.swift */; };
@@ -52,6 +53,7 @@
 		D690675D2658958B00716728 /* SearchBookCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBookCardCell.xib; sourceTree = "<group>"; };
 		D6954B7526719A7F005CC0AC /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		D6954B7726719A96005CC0AC /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		D69D49222680699600D2AA15 /* LibraryMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryMapViewController.swift; sourceTree = "<group>"; };
 		D6A28E302673451D00CAEDB1 /* SearchBooksOfLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksOfLibraryViewController.swift; sourceTree = "<group>"; };
 		D6A9087C2666F36D00670EDC /* GoogleBooksAPIParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksAPIParams.swift; sourceTree = "<group>"; };
 		D6A9087E2666FA9800670EDC /* GoogleBooksAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksAPIModel.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				D6954B7526719A7F005CC0AC /* WebViewController.swift */,
 				D6A28E302673451D00CAEDB1 /* SearchBooksOfLibraryViewController.swift */,
 				D61C66A4267A13FA008C5D18 /* LibraryDetailViewController.swift */,
+				D69D49222680699600D2AA15 /* LibraryMapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				D6A28E312673451D00CAEDB1 /* SearchBooksOfLibraryViewController.swift in Sources */,
 				D628A3CD26630C20005D20FB /* SearchViewController.swift in Sources */,
 				D6A9087D2666F36D00670EDC /* GoogleBooksAPIParams.swift in Sources */,
+				D69D49232680699600D2AA15 /* LibraryMapViewController.swift in Sources */,
 				D6F89543267747D7005864BA /* CalilBookJyoutaiGetParams.swift in Sources */,
 				D690674B2658795E00716728 /* SceneDelegate.swift in Sources */,
 				D6F89541267747B7005864BA /* CalilBookJyoutaiGetModel.swift in Sources */,
@@ -380,7 +384,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -435,7 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -454,7 +458,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3YH8M4N64N;
 				INFOPLIST_FILE = BookResearchApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,7 +479,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3YH8M4N64N;
 				INFOPLIST_FILE = BookResearchApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, GetDataCompleteDelegate {
+class SearchViewController: UIViewController, GetDataCompleteDelegate,UITextFieldDelegate {
    
     @IBOutlet weak var bubunLabel: UILabel!
     @IBOutlet weak var kanzenLabel: UILabel!
@@ -40,11 +40,29 @@ class SearchViewController: UIViewController, GetDataCompleteDelegate {
     {
         super.viewDidLoad()
         
+        searchKeywordTextField.delegate = self
+        titleTextField.delegate = self
+        authorTextField.delegate = self
+        publisherTextField.delegate = self
+        
         alertLabel.isHidden = true
         ChangeImageViewAndLabelLayer(imageView: newOrderImageView, label: newOrderLabel, color: .gray, imageName: "square", useFlg: false)
         ChangeTextFieldLayer(textField: titleTextField, imageView: titleImageView,tapFlg: false)
         ChangeTextFieldLayer(textField: authorTextField, imageView: authorImageView,tapFlg: false)
         ChangeTextFieldLayer(textField: publisherTextField, imageView: publisherImageView,tapFlg: false)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        searchKeywordTextField.resignFirstResponder()
+        titleTextField.resignFirstResponder()
+        authorTextField.resignFirstResponder()
+        publisherTextField.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
     }
     
     @IBAction func bubunTap(_ sender: Any)

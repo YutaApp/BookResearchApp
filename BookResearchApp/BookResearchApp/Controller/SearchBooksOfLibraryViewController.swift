@@ -9,7 +9,7 @@ import UIKit
 import DropDown
 import PKHUD
 
-class SearchBooksOfLibraryViewController: UIViewController,CalilGetDataCompleteDelegate,UITableViewDelegate,UITableViewDataSource,TableViewReloadOKDelegate{
+class SearchBooksOfLibraryViewController: UIViewController,CalilGetDataCompleteDelegate,UITableViewDelegate,UITableViewDataSource,TableViewReloadOKDelegate,UITextFieldDelegate{
    
     @IBOutlet weak var dropdownViewC: UIView!
     @IBOutlet weak var dropdownView: UIView!
@@ -81,8 +81,11 @@ class SearchBooksOfLibraryViewController: UIViewController,CalilGetDataCompleteD
     {
         super.viewDidLoad()
 
+        isbnTextField.delegate = self
+        
         initDropDown()
         
+        isbnTextField.text = "4344037731"
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
@@ -202,6 +205,7 @@ class SearchBooksOfLibraryViewController: UIViewController,CalilGetDataCompleteD
                 libraryDetailVC.strCategory = libraryInfoGetModel.libraryInfoGetParamsArray[i].strCategory
                 libraryDetailVC.strAddress = libraryInfoGetModel.libraryInfoGetParamsArray[i].strAddress
                 libraryDetailVC.strTel = libraryInfoGetModel.libraryInfoGetParamsArray[i].strTel
+                libraryDetailVC.strCoordinate = libraryInfoGetModel.libraryInfoGetParamsArray[i].strGeocode
                 break
             }
         }
@@ -219,6 +223,16 @@ class SearchBooksOfLibraryViewController: UIViewController,CalilGetDataCompleteD
             tableView.reloadData()
             HUD.hide()
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        isbnTextField.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
     }
     
 }
