@@ -739,8 +739,8 @@
         <image name="iconfinder_color-web3-18_5094671" width="512" height="512"/>
         <image name="library" width="427" height="640"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="map" width="833" height="1280"/>
         <image name="map" catalog="system" width="128" height="110"/>
+        <image name="map" width="833" height="1280"/>
         <image name="square" catalog="system" width="128" height="114"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">

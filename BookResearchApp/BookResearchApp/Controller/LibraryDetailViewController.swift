@@ -105,7 +105,7 @@ class LibraryDetailViewController: UIViewController,CLLocationManagerDelegate, M
     
     func addLibraryAnnotation()
     {
-        //libraryMapView.removeAnnotation(libraryMapView.annotations as! MKAnnotation)
+        libraryMapView.removeAnnotations(libraryMapView.annotations)
         
         geocodeArray = strCoordinate.split(separator: ",")
         
@@ -113,6 +113,10 @@ class LibraryDetailViewController: UIViewController,CLLocationManagerDelegate, M
         
         libraryMapView.addAnnotation(libraryAnnotation)
         
+        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let region = MKCoordinateRegion(center: libraryAnnotation.coordinate, span: span)
+        
+        libraryMapView.region = region
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager)
