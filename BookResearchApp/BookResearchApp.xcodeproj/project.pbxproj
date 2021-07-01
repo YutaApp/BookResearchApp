@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		D61C66A5267A13FA008C5D18 /* LibraryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61C66A4267A13FA008C5D18 /* LibraryDetailViewController.swift */; };
 		D628A3CD26630C20005D20FB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D628A3CC26630C20005D20FB /* SearchViewController.swift */; };
+		D6873FEC268D615300D2C5B0 /* iPhoneX.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6873FEB268D615300D2C5B0 /* iPhoneX.storyboard */; };
+		D6873FEE268D7AC000D2C5B0 /* iPhone12.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6873FED268D7AC000D2C5B0 /* iPhone12.storyboard */; };
+		D6873FF0268D7F0F00D2C5B0 /* iPhone11.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6873FEF268D7F0F00D2C5B0 /* iPhone11.storyboard */; };
+		D6873FF2268D82D100D2C5B0 /* iPhone12ProMax.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6873FF1268D82D100D2C5B0 /* iPhone12ProMax.storyboard */; };
 		D68CA02D2674AD7F00D24FC5 /* LibraryInfoGetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68CA02C2674AD7F00D24FC5 /* LibraryInfoGetModel.swift */; };
 		D69067492658795E00716728 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69067482658795E00716728 /* AppDelegate.swift */; };
 		D690674B2658795E00716728 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690674A2658795E00716728 /* SceneDelegate.swift */; };
@@ -21,11 +25,13 @@
 		D6954B7826719A96005CC0AC /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6954B7726719A96005CC0AC /* WebKit.framework */; };
 		D69D49232680699600D2AA15 /* LibraryMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D49222680699600D2AA15 /* LibraryMapViewController.swift */; };
 		D6A28E312673451D00CAEDB1 /* SearchBooksOfLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A28E302673451D00CAEDB1 /* SearchBooksOfLibraryViewController.swift */; };
+		D6A5660726841AE400D36AD1 /* iPhoneSE1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6A5660626841AE400D36AD1 /* iPhoneSE1.storyboard */; };
 		D6A9087D2666F36D00670EDC /* GoogleBooksAPIParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A9087C2666F36D00670EDC /* GoogleBooksAPIParams.swift */; };
 		D6A9087F2666FA9800670EDC /* GoogleBooksAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A9087E2666FA9800670EDC /* GoogleBooksAPIModel.swift */; };
 		D6AE74C926709EB900CDA6FA /* FavoriteBookCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AE74C826709EB900CDA6FA /* FavoriteBookCardViewController.swift */; };
 		D6AE74CB2670A20B00CDA6FA /* FavoriteBookDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AE74CA2670A20B00CDA6FA /* FavoriteBookDB.swift */; };
 		D6AE74CD2670A92D00CDA6FA /* FavoriteBookDBParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AE74CC2670A92D00CDA6FA /* FavoriteBookDBParams.swift */; };
+		D6D6DE0E2685463900167A34 /* iPhoneSE2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D6DE0D2685463900167A34 /* iPhoneSE2.storyboard */; };
 		D6E2DB022668E652004EB6D4 /* BookSearchDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E2DB012668E652004EB6D4 /* BookSearchDataViewController.swift */; };
 		D6F8953B267710B6005864BA /* LibraryInfoGetParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F8953A267710B6005864BA /* LibraryInfoGetParams.swift */; };
 		D6F8953E26773F8F005864BA /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F8953C26773F8F005864BA /* TableViewCell.swift */; };
@@ -41,6 +47,10 @@
 		C78B42C71F1E9D9B287A3A11 /* Pods-BookResearchApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookResearchApp.release.xcconfig"; path = "Target Support Files/Pods-BookResearchApp/Pods-BookResearchApp.release.xcconfig"; sourceTree = "<group>"; };
 		D61C66A4267A13FA008C5D18 /* LibraryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryDetailViewController.swift; sourceTree = "<group>"; };
 		D628A3CC26630C20005D20FB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D6873FEB268D615300D2C5B0 /* iPhoneX.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhoneX.storyboard; sourceTree = "<group>"; };
+		D6873FED268D7AC000D2C5B0 /* iPhone12.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhone12.storyboard; sourceTree = "<group>"; };
+		D6873FEF268D7F0F00D2C5B0 /* iPhone11.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhone11.storyboard; sourceTree = "<group>"; };
+		D6873FF1268D82D100D2C5B0 /* iPhone12ProMax.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhone12ProMax.storyboard; sourceTree = "<group>"; };
 		D68CA02C2674AD7F00D24FC5 /* LibraryInfoGetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryInfoGetModel.swift; sourceTree = "<group>"; };
 		D69067452658795E00716728 /* BookResearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookResearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69067482658795E00716728 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,11 +65,13 @@
 		D6954B7726719A96005CC0AC /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		D69D49222680699600D2AA15 /* LibraryMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryMapViewController.swift; sourceTree = "<group>"; };
 		D6A28E302673451D00CAEDB1 /* SearchBooksOfLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksOfLibraryViewController.swift; sourceTree = "<group>"; };
+		D6A5660626841AE400D36AD1 /* iPhoneSE1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhoneSE1.storyboard; sourceTree = "<group>"; };
 		D6A9087C2666F36D00670EDC /* GoogleBooksAPIParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksAPIParams.swift; sourceTree = "<group>"; };
 		D6A9087E2666FA9800670EDC /* GoogleBooksAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksAPIModel.swift; sourceTree = "<group>"; };
 		D6AE74C826709EB900CDA6FA /* FavoriteBookCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteBookCardViewController.swift; sourceTree = "<group>"; };
 		D6AE74CA2670A20B00CDA6FA /* FavoriteBookDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBookDB.swift; sourceTree = "<group>"; };
 		D6AE74CC2670A92D00CDA6FA /* FavoriteBookDBParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBookDBParams.swift; sourceTree = "<group>"; };
+		D6D6DE0D2685463900167A34 /* iPhoneSE2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhoneSE2.storyboard; sourceTree = "<group>"; };
 		D6E2DB012668E652004EB6D4 /* BookSearchDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchDataViewController.swift; sourceTree = "<group>"; };
 		D6F8953A267710B6005864BA /* LibraryInfoGetParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryInfoGetParams.swift; sourceTree = "<group>"; };
 		D6F8953C26773F8F005864BA /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -122,6 +134,12 @@
 				D690675D2658958B00716728 /* SearchBookCardCell.xib */,
 				D6F8953C26773F8F005864BA /* TableViewCell.swift */,
 				D6F8953D26773F8F005864BA /* TableViewCell.xib */,
+				D6A5660626841AE400D36AD1 /* iPhoneSE1.storyboard */,
+				D6D6DE0D2685463900167A34 /* iPhoneSE2.storyboard */,
+				D6873FEB268D615300D2C5B0 /* iPhoneX.storyboard */,
+				D6873FED268D7AC000D2C5B0 /* iPhone12.storyboard */,
+				D6873FEF268D7F0F00D2C5B0 /* iPhone11.storyboard */,
+				D6873FF1268D82D100D2C5B0 /* iPhone12ProMax.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -232,11 +250,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6D6DE0E2685463900167A34 /* iPhoneSE2.storyboard in Resources */,
+				D6873FF0268D7F0F00D2C5B0 /* iPhone11.storyboard in Resources */,
 				D69067552658795E00716728 /* LaunchScreen.storyboard in Resources */,
 				D6F8953F26773F8F005864BA /* TableViewCell.xib in Resources */,
+				D6873FF2268D82D100D2C5B0 /* iPhone12ProMax.storyboard in Resources */,
 				D69067522658795E00716728 /* Assets.xcassets in Resources */,
+				D6873FEC268D615300D2C5B0 /* iPhoneX.storyboard in Resources */,
 				D690675F2658958B00716728 /* SearchBookCardCell.xib in Resources */,
 				D69067502658795E00716728 /* Main.storyboard in Resources */,
+				D6A5660726841AE400D36AD1 /* iPhoneSE1.storyboard in Resources */,
+				D6873FEE268D7AC000D2C5B0 /* iPhone12.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
