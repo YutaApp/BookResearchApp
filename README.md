@@ -15,3 +15,7 @@
 ##### ・VerticalCardSwiper
 ##### ・SDWebImage
 ##### ・PKHUD
+
+### API
+##### ・Google Books API
+##### ・カーリルAPI
