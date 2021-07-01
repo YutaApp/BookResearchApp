@@ -110,6 +110,9 @@ class LibraryMapViewController: UIViewController, CalilGetDataCompleteDelegate,C
         dropDownC.selectionAction = {[unowned self](index:Int,item:String)in
             cityNameBtn.setTitle(libraryInfoGetModel.strCityNameArray[index], for: .normal)
             
+            selectCityGeocodeArray.removeAll()
+            selectCityNameArray.removeAll()
+            
             for i in 0..<libraryInfoGetModel.libraryInfoGetParamsArray.count
             {
                 if libraryInfoGetModel.libraryInfoGetParamsArray[i].strSystemid == libraryInfoGetModel.strSystemidArray[index]
