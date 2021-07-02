@@ -43,6 +43,7 @@ class LibraryInfoGetModel
                 
                 libraryInfoGetParamsArray.removeAll()
                 strCityNameArray.removeAll()
+                strSystemidArray.removeAll()
                 
                 for i in 0..<json.count
                 {

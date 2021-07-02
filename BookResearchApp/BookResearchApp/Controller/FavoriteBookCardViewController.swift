@@ -110,7 +110,7 @@ class FavoriteBookCardViewController: UIViewController,VerticalCardSwiperDelegat
     
     func willSwipeCardAway(card: CardCell, index: Int, swipeDirection: SwipeDirection)
     {
-        if swipeDirection == .Left
+        if swipeDirection == .Left || swipeDirection == .Right
         {
             deleteIndex = index
             bookDataDeleteFromRealm()

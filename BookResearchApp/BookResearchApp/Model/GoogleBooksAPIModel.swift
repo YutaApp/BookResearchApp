@@ -47,6 +47,8 @@ class GoogleBooksAPIModel
                     itemCount = 40
                 }
                 
+                self.params.removeAll()
+                
                 for i in 0 ..< itemCount
                 {
                     strType1 = ""
