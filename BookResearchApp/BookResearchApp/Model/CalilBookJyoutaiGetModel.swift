@@ -16,6 +16,8 @@ protocol TableViewReloadOKDelegate
 
 class CalilBookJyoutaiGetModel
 {
+    var getSystemid = String()
+    var dicSystemid = [String:Any]()
     var libkey = [String:Any]()
     var libkeyKArray = [String]()
     var libkeyVArray = [String]()
@@ -31,9 +33,10 @@ class CalilBookJyoutaiGetModel
             case .success:
                 let json = JSON(response.data as Any)
                 
-                if let libkey2:[String:Any] = json["books"]["\(isbn)"]["\(systemid)"]["libkey"].dictionary
+                if let libkey2:[String:Any] = json["books"]["\(isbn)"]["\(systemid)"]["libkey"].dictionary,let systemid2:[String:Any] = json["books"]["\(isbn)"].dictionary
                 {
                     libkey = libkey2
+                    dicSystemid = systemid2
                     
                     libkeyKArray.removeAll()
                     libkeyVArray.removeAll()
@@ -42,6 +45,11 @@ class CalilBookJyoutaiGetModel
                     {
                         libkeyKArray.append(k)
                         libkeyVArray.append("\(v)")
+                    }
+                    
+                    for (k,_) in dicSystemid
+                    {
+                        getSystemid = k
                     }
                     
                     tableViewReloadOKDelegate?.reloadOK(flg: 1)

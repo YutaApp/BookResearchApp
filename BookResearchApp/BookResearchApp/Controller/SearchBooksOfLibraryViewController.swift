@@ -173,7 +173,8 @@ class SearchBooksOfLibraryViewController: UIViewController,CalilGetDataCompleteD
         
         for i in 0..<libraryInfoGetModel.libraryInfoGetParamsArray.count
         {
-            if calilBookJyoutaiGetModel.libkeyKArray[indexPath.row] == libraryInfoGetModel.libraryInfoGetParamsArray[i].strLibkey
+            if calilBookJyoutaiGetModel.libkeyKArray[indexPath.row] == libraryInfoGetModel.libraryInfoGetParamsArray[i].strLibkey &&
+                calilBookJyoutaiGetModel.getSystemid == libraryInfoGetModel.libraryInfoGetParamsArray[i].strSystemid
             {
                 cell.libNameLabel.text = libraryInfoGetModel.libraryInfoGetParamsArray[i].strFormal
             }
@@ -198,7 +199,8 @@ class SearchBooksOfLibraryViewController: UIViewController,CalilGetDataCompleteD
         
         for i in 0..<libraryInfoGetModel.libraryInfoGetParamsArray.count
         {
-            if calilBookJyoutaiGetModel.libkeyKArray[didSelectIndex] == libraryInfoGetModel.libraryInfoGetParamsArray[i].strLibkey
+            if calilBookJyoutaiGetModel.libkeyKArray[didSelectIndex] == libraryInfoGetModel.libraryInfoGetParamsArray[i].strLibkey &&
+                calilBookJyoutaiGetModel.getSystemid == libraryInfoGetModel.libraryInfoGetParamsArray[i].strSystemid
             {
                 libraryDetailVC.strFormal = libraryInfoGetModel.libraryInfoGetParamsArray[i].strFormal
                 libraryDetailVC.strShort = libraryInfoGetModel.libraryInfoGetParamsArray[i].strShort
