@@ -268,6 +268,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ISBN10をコピーしました" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C15-71-DJX">
+                                <rect key="frame" x="15" y="700" width="383" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcb-KL-R4I">
                                 <rect key="frame" x="20" y="15" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -283,6 +291,7 @@
                     </view>
                     <connections>
                         <outlet property="cardSwiper" destination="pkO-dy-8wo" id="ckN-7P-MPy"/>
+                        <outlet property="toast" destination="C15-71-DJX" id="HwC-a4-Yqv"/>
                         <segue destination="5Fm-ko-Jq9" kind="presentation" id="28E-ES-IqH"/>
                     </connections>
                 </viewController>
@@ -739,8 +748,8 @@
         <image name="iconfinder_color-web3-18_5094671" width="512" height="512"/>
         <image name="library" width="427" height="640"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="map" width="833" height="1280"/>
         <image name="map" catalog="system" width="128" height="110"/>
+        <image name="map" width="833" height="1280"/>
         <image name="square" catalog="system" width="128" height="114"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
@@ -748,6 +757,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

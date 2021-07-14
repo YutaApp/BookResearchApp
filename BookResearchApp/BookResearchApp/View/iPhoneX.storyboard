@@ -276,15 +276,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPr-30-ZNH">
-                                <rect key="frame" x="10" y="60" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" image="back"/>
-                                <connections>
-                                    <action selector="back:" destination="AHl-Ra-hp6" eventType="touchUpInside" id="wsr-Kl-n7I"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5OZ-d2-7To" customClass="VerticalCardSwiper" customModule="VerticalCardSwiper">
                                 <rect key="frame" x="0.0" y="121" width="375" height="691"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -298,12 +289,30 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPr-30-ZNH">
+                                <rect key="frame" x="10" y="60" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="back:" destination="AHl-Ra-hp6" eventType="touchUpInside" id="wsr-Kl-n7I"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ISBN10をコピーしました" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUD-CZ-tEy">
+                                <rect key="frame" x="15" y="695" width="350" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2BE-7H-pbc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="cardSwiper" destination="5OZ-d2-7To" id="UNI-4F-350"/>
+                        <outlet property="toast" destination="RUD-CZ-tEy" id="ann-48-Rr8"/>
                         <segue destination="3Gb-Uq-7xs" kind="presentation" modalPresentationStyle="fullScreen" id="0Pp-rz-I2O"/>
                     </connections>
                 </viewController>
@@ -739,8 +748,8 @@
         <image name="iconfinder_color-web3-18_5094671" width="512" height="512"/>
         <image name="library" width="427" height="640"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="map" width="833" height="1280"/>
         <image name="map" catalog="system" width="128" height="110"/>
+        <image name="map" width="833" height="1280"/>
         <image name="square" catalog="system" width="128" height="114"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
@@ -748,6 +757,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

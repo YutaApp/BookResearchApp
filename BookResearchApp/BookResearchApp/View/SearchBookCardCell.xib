@@ -131,14 +131,35 @@
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
                     </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfI-pB-jTc">
+                        <rect key="frame" x="182" y="195" width="70" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <state key="normal" title="ISBN10コピー">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Qf-6A-jKR">
+                        <rect key="frame" x="257" y="195" width="70" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <state key="normal" title="ISBN13コピー">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.53267682650000003" green="0.33861633400000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="amazonTap" destination="rf5-Mo-t5D" id="XxX-PB-YeN"/>
                 <outlet property="authorLabel" destination="bRr-bZ-M3M" id="FzU-JB-TAr"/>
                 <outlet property="bookImageView" destination="C3s-SC-zJU" id="7XZ-uQ-Bzv"/>
+                <outlet property="isbn10Copy" destination="MfI-pB-jTc" id="qC7-HL-mzg"/>
                 <outlet property="isbn10Label" destination="Ln2-tw-juD" id="tYh-8O-GfD"/>
+                <outlet property="isbn13Copy" destination="3Qf-6A-jKR" id="qRy-3s-isC"/>
                 <outlet property="isbn13Label" destination="n7R-af-Vev" id="XAo-ks-mkl"/>
                 <outlet property="pageCountLabel" destination="Mjf-xW-4F9" id="pB1-5k-gdi"/>
                 <outlet property="publishedDateLabel" destination="SNc-F4-sLj" id="hjm-cJ-P7J"/>
