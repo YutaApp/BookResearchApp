@@ -38,10 +38,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         {
             storyboard = UIStoryboard(name: "Main", bundle: nil)
         }
-        else if height == 568 //iPhoneSE1
-        {
-            storyboard = UIStoryboard(name: "iPhoneSE1", bundle: nil)
-        }
         else if height == 667 //iPhone7,8,SE2
         {
             storyboard = UIStoryboard(name: "iPhoneSE2", bundle: nil)

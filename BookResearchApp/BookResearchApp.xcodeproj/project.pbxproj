@@ -25,7 +25,6 @@
 		D6954B7826719A96005CC0AC /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6954B7726719A96005CC0AC /* WebKit.framework */; };
 		D69D49232680699600D2AA15 /* LibraryMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D49222680699600D2AA15 /* LibraryMapViewController.swift */; };
 		D6A28E312673451D00CAEDB1 /* SearchBooksOfLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A28E302673451D00CAEDB1 /* SearchBooksOfLibraryViewController.swift */; };
-		D6A5660726841AE400D36AD1 /* iPhoneSE1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6A5660626841AE400D36AD1 /* iPhoneSE1.storyboard */; };
 		D6A9087D2666F36D00670EDC /* GoogleBooksAPIParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A9087C2666F36D00670EDC /* GoogleBooksAPIParams.swift */; };
 		D6A9087F2666FA9800670EDC /* GoogleBooksAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A9087E2666FA9800670EDC /* GoogleBooksAPIModel.swift */; };
 		D6AE74C926709EB900CDA6FA /* FavoriteBookCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AE74C826709EB900CDA6FA /* FavoriteBookCardViewController.swift */; };
@@ -65,7 +64,6 @@
 		D6954B7726719A96005CC0AC /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		D69D49222680699600D2AA15 /* LibraryMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryMapViewController.swift; sourceTree = "<group>"; };
 		D6A28E302673451D00CAEDB1 /* SearchBooksOfLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksOfLibraryViewController.swift; sourceTree = "<group>"; };
-		D6A5660626841AE400D36AD1 /* iPhoneSE1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhoneSE1.storyboard; sourceTree = "<group>"; };
 		D6A9087C2666F36D00670EDC /* GoogleBooksAPIParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksAPIParams.swift; sourceTree = "<group>"; };
 		D6A9087E2666FA9800670EDC /* GoogleBooksAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksAPIModel.swift; sourceTree = "<group>"; };
 		D6AE74C826709EB900CDA6FA /* FavoriteBookCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteBookCardViewController.swift; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 				D690675D2658958B00716728 /* SearchBookCardCell.xib */,
 				D6F8953C26773F8F005864BA /* TableViewCell.swift */,
 				D6F8953D26773F8F005864BA /* TableViewCell.xib */,
-				D6A5660626841AE400D36AD1 /* iPhoneSE1.storyboard */,
 				D6D6DE0D2685463900167A34 /* iPhoneSE2.storyboard */,
 				D6873FEB268D615300D2C5B0 /* iPhoneX.storyboard */,
 				D6873FED268D7AC000D2C5B0 /* iPhone12.storyboard */,
@@ -259,7 +256,6 @@
 				D6873FEC268D615300D2C5B0 /* iPhoneX.storyboard in Resources */,
 				D690675F2658958B00716728 /* SearchBookCardCell.xib in Resources */,
 				D69067502658795E00716728 /* Main.storyboard in Resources */,
-				D6A5660726841AE400D36AD1 /* iPhoneSE1.storyboard in Resources */,
 				D6873FEE268D7AC000D2C5B0 /* iPhone12.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
