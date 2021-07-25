@@ -19,10 +19,13 @@ class FavoriteBookCardViewController: UIViewController,VerticalCardSwiperDelegat
     var rakutenBooksURL = String()
     
     @IBOutlet weak var favoriteCardSwiper: VerticalCardSwiper!
+    @IBOutlet weak var toast: UILabel!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        toast.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool)
@@ -73,6 +76,12 @@ class FavoriteBookCardViewController: UIViewController,VerticalCardSwiperDelegat
             cardCell.rakutenTap.addTarget(self, action: #selector(rakutenBooksToMove(_:)), for: .touchUpInside)
             cardCell.rakutenTap.tag = index
             
+            cardCell.isbn10Copy.addTarget(self, action: #selector(isbn10Copy(_:)), for: .touchUpInside)
+            cardCell.isbn10Copy.tag = index
+            
+            cardCell.isbn13Copy.addTarget(self, action: #selector(isbn13Copy(_:)), for: .touchUpInside)
+            cardCell.isbn13Copy.tag = index
+            
             return cardCell
         }
         return CardCell()
@@ -106,6 +115,18 @@ class FavoriteBookCardViewController: UIViewController,VerticalCardSwiperDelegat
         webVC.amazonURL = amazonURL
         
         self.present(webVC, animated: true, completion: nil)
+    }
+    
+    @objc func isbn10Copy(_ sender:UIButton)
+    {
+        UIPasteboard.general.string = favoriteBookDataArray[sender.tag].strISBN10
+        toastShow(msg: "ISBN10をコピーしました")
+    }
+    
+    @objc func isbn13Copy(_ sender:UIButton)
+    {
+        UIPasteboard.general.string = favoriteBookDataArray[sender.tag].strISBN13
+        toastShow(msg: "ISBN13をコピーしました")
     }
     
     func willSwipeCardAway(card: CardCell, index: Int, swipeDirection: SwipeDirection)
@@ -143,6 +164,20 @@ class FavoriteBookCardViewController: UIViewController,VerticalCardSwiperDelegat
             saveWriteToRealm.delete(deleteData)
          }
         
+    }
+    
+    func toastShow(msg:String)
+    {
+        toast.isHidden = false
+        toast.alpha = 1.0
+        toast.text = msg
+        toast.layer.cornerRadius = 10
+        //self.view.addSubview(toast)
+        
+        UIView.animate(withDuration: 2.5)
+        {
+            self.toast.alpha = 0.0
+        }
     }
 
 }

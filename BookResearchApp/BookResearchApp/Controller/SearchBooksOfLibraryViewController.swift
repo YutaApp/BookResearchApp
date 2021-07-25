@@ -85,7 +85,6 @@ class SearchBooksOfLibraryViewController: UIViewController,CalilGetDataCompleteD
         
         initDropDown()
         
-        isbnTextField.text = "4344037731"
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
