@@ -507,7 +507,7 @@
             </objects>
             <point key="canvasLocation" x="488.80000000000001" y="1504.4977511244379"/>
         </scene>
-        <!--お気に入り-->
+        <!--あとで買う-->
         <scene sceneID="nNa-JF-lYV">
             <objects>
                 <viewController id="ccT-lb-Y9Q" customClass="FavoriteBookCardViewController" customModule="BookResearchApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -536,7 +536,7 @@
                         <viewLayoutGuide key="safeArea" id="ICS-C1-Jhs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="お気に入り" image="star" catalog="system" id="GsA-Xe-hEF"/>
+                    <tabBarItem key="tabBarItem" title="あとで買う" image="cart" catalog="system" id="GsA-Xe-hEF"/>
                     <connections>
                         <outlet property="favoriteCardSwiper" destination="MxB-rn-nV2" id="BpV-ub-OWT"/>
                     </connections>
@@ -744,14 +744,14 @@
         <image name="book" catalog="system" width="128" height="102"/>
         <image name="books" width="427" height="640"/>
         <image name="booksearch" width="1280" height="1920"/>
+        <image name="cart" catalog="system" width="128" height="102"/>
         <image name="favorite" width="932" height="1280"/>
         <image name="iconfinder_color-web3-18_5094671" width="512" height="512"/>
         <image name="library" width="427" height="640"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="map" catalog="system" width="128" height="110"/>
         <image name="map" width="833" height="1280"/>
+        <image name="map" catalog="system" width="128" height="110"/>
         <image name="square" catalog="system" width="128" height="114"/>
-        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
