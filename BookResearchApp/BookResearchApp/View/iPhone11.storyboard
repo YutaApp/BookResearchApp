@@ -725,6 +725,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ISBN10をコピーしました" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2x2-Be-ScC">
+                                <rect key="frame" x="15" y="770" width="385" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hNd-fm-FYA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -732,6 +740,7 @@
                     <tabBarItem key="tabBarItem" title="あとで買う" image="cart" catalog="system" id="5Jb-7U-eiA"/>
                     <connections>
                         <outlet property="favoriteCardSwiper" destination="EUf-lq-2nx" id="7ty-Sr-pCn"/>
+                        <outlet property="toast" destination="2x2-Be-ScC" id="Mw6-48-SWq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Avp-gm-zqp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -749,8 +758,8 @@
         <image name="iconfinder_color-web3-18_5094671" width="512" height="512"/>
         <image name="library" width="427" height="640"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="map" catalog="system" width="128" height="110"/>
         <image name="map" width="833" height="1280"/>
+        <image name="map" catalog="system" width="128" height="110"/>
         <image name="square" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
